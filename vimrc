@@ -7,6 +7,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'https://github.com/vim-scripts/ScrollColors'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'scrooloose/nerdtree'
+Plugin 'garbas/vim-snipmate'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'marcweber/vim-addon-mw-utils'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -16,6 +22,8 @@ filetype plugin indent on    " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+
+guifont=Lucida_Console:h11
 
 set nocompatible                " choose no compatibility with legacy vi
 syntax enable

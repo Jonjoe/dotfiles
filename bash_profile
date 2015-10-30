@@ -20,6 +20,7 @@ alias reloadhere=""
 alias hosts="sudo atom /etc/hosts"
 alias migrate="rake db:migrate && rake db:migrate RAILS_ENV=test"
 alias rspec="RAILS_ENV=test rspec"
+alias vimplugins="vim +PluginInstall +qall"
 # ----------------------------
 
 # ----------------------------
