@@ -2,6 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
+set number
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -23,7 +24,7 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
-guifont=Lucida_Console:h11
+" guifont=Lucida_Console:h11
 
 set nocompatible                " choose no compatibility with legacy vi
 syntax enable
