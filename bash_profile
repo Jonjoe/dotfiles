@@ -4,7 +4,7 @@ cd ~/Code
 # Terminal Inits
 # ----------------------------
 . ~/variables.sh
-. ~/projects.sh
+. ~/.projects.sh
 . ~/dotfiles/scripts/git-prompt.sh
 . ~/.nvm/nvm.sh
 
