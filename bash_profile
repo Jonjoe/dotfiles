@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Inits
 #----------------------------
 . ~/dotfiles/scripts/git-prompt.sh
@@ -34,13 +36,16 @@ cd ()
 # Streamlined Commits
 commit()
 {
-   git add .
-   git commit -m "$2"
- 
-
+   # git add .
+   # git commit -m "$2"
    while getopts ":a" opt; do
       case $opt in
-         a) echo "-a was triggered!" >&2 ;;
+         a)
+            echo "-a was triggered!" >&2
+            ;;
+         \?)
+            echo "Invalid option: -$OPTARG" >&2
+            ;;
       esac
    done
 }
@@ -72,7 +77,7 @@ ghost ()
     . /Volumes/WORK/_assets/scripts/ghost.sh $@
 }
 
-# Generate Wordpress instance
+
 ror ()
 {
     . /Volumes/WORK/_assets/scripts/rails.sh $@
