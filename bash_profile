@@ -35,16 +35,13 @@ cd ()
 commit()
 {
    git add .
-   git commit -m "$1"
-   TEMP=`getopt --long -o "p:" "$2"`
-   eval set -- "$TEMP"
-   while true ; do
-      case "$2" in
-         -p )
-            echo "push it baby"
-         ;;
-      esac 
-   done;            
+   git commit -m "$2"
+   while getopts 'p:' flag; do
+      case "${flag}" in
+         a) echo "push it baby" ;;
+      esac
+   done
+
 }
 
 
