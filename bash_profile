@@ -55,20 +55,22 @@ backup()
 # Generate Ghost instance
 ghost ()
 {
-    . /Volumes/WORK/_assets/scripts/ghost.sh $@
+    . ~/dotfiles/scripts/ghost.sh $@
 }
 
-
+#Generate Rails instance
 ror ()
 {
-    . /Volumes/WORK/_assets/scripts/rails.sh $@
+    . ~/dotfiles/scripts/rails.sh $@
 }
 
 # Generate Wordpress instance
 wordpress ()
 {
-    . /Volumes/WORK/_assets/scripts/wordpress.sh $@
+    . ~/dotfiles/scripts/wordpress.sh $@
 }
+
+
 # ----------------------------
 
 
