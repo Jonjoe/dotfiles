@@ -31,6 +31,14 @@ cd ()
     ls -la
 }
 
+# Streamlined Commits
+shit()
+{
+    git add .
+    git commit -m "$@"
+}
+
+
 # Change iterms tab name
 tab ()
 {

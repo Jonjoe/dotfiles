@@ -17,7 +17,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'marcweber/vim-addon-mw-utils'
 
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 
 call vundle#end()            " required
 filetype plugin indent on    " required
