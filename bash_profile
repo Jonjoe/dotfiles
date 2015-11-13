@@ -38,9 +38,9 @@ commit()
    git commit -m "$2"
  
 
-   while getopts ":p" opt; do
+   while getopts ":a" opt; do
       case $opt in
-         -p) echo "-a was triggered!" ;;
+         a) echo "-a was triggered!" >&2 ;;
       esac
    done
 }
