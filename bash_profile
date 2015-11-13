@@ -36,12 +36,13 @@ commit()
 {
    git add .
    git commit -m "$2"
-   while getopts 'p' flag; do
-      case "${flag}" in
-         p) echo "push it baby" ;;
+ 
+
+   while getopts ":p" opt; do
+      case $opt in
+         -p) echo "-a was triggered!" ;;
       esac
    done
-
 }
 
 
