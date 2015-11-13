@@ -10,10 +10,14 @@ Plugin 'https://github.com/vim-scripts/ScrollColors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'garbas/vim-snipmate'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'kien/ctrlp.vim'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'marcweber/vim-addon-mw-utils'
+
+autocmd vimenter * NERDTree
 
 call vundle#end()            " required
 filetype plugin indent on    " required

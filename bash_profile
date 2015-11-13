@@ -1,10 +1,5 @@
-cd ~/Code
-
-# ----------------------------
-# Terminal Inits
-# ----------------------------
-. ~/variables.sh
-. ~/.projects.sh
+# Inits
+#----------------------------
 . ~/dotfiles/scripts/git-prompt.sh
 . ~/.nvm/nvm.sh
 
@@ -59,19 +54,19 @@ backup()
 # Generate Ghost instance
 ghost ()
 {
-    . /Users/$USER/dotfiles/scripts/ghost.sh $@
+    . /Volumes/WORK/_assets/scripts/ghost.sh $@
 }
 
 # Generate Wordpress instance
 ror ()
 {
-    . /Users/$USER/dotfiles/scripts/rails.sh $@
+    . /Volumes/WORK/_assets/scripts/rails.sh $@
 }
 
 # Generate Wordpress instance
 wordpress ()
 {
-    . /Users/$USER/dotfiles/scripts/wordpress.sh $@
+    . /Volumes/WORK/_assets/scripts/wordpress.sh $@
 }
 # ----------------------------
 
@@ -86,5 +81,4 @@ alias vp02="ssh $SERVERUSER@$PRODUCTIONSERVER2"
 
 
 eval "$(rbenv init -)"
-eval "$(thefuck --alias)"
 export PATH="$HOME/.rbenv/bin:$PATH"
