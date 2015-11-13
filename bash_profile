@@ -32,7 +32,7 @@ cd ()
 }
 
 # Streamlined Commits
-shit()
+commit()
 {
     git add .
     git commit -m "$@"
