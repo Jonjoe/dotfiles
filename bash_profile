@@ -15,7 +15,6 @@ PS1="\[\033[0;97m\][\[\033[0m\]\[\033[0;94m\]Local\[\033[0m\]\[\033[0;97m\]]\[\0
 # Custom Commands
 # ----------------------------
 alias reload=". ~/.bash_profile"
-alias reloadhere=""
 alias hosts="sudo atom /etc/hosts"
 alias migrate="rake db:migrate && rake db:migrate RAILS_ENV=test"
 alias rspec="RAILS_ENV=test rspec"
@@ -32,24 +31,6 @@ cd ()
     builtin cd $@
     ls -la
 }
-
-# Streamlined Commits
-commit()
-{
-   # git add .
-   # git commit -m "$2"
-   while getopts ":a" opt; do
-      case $opt in
-         a)
-            echo "-a was triggered!" >&2
-            ;;
-         \?)
-            echo "Invalid option: -$OPTARG" >&2
-            ;;
-      esac
-   done
-}
-
 
 # Change iterms tab name
 tab ()
@@ -98,7 +79,6 @@ alias vd="ssh $SERVERUSER@$DEVELOPMENTSERVER"
 alias vp01="ssh $SERVERUSER@$PRODUCTIONSERVER1"
 alias vp02="ssh $SERVERUSER@$PRODUCTIONSERVER2"
 # ----------------------------
-
 
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/bin:$PATH"
