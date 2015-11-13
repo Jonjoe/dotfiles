@@ -34,17 +34,17 @@ cd ()
 # Streamlined Commits
 commit()
 {
-    git add .
-    git commit -m "$@"
-
-    while getopts “:p:” OPTION
-       do
-          case $OPTION in
-             p)
-                echo "push it baby"
-                ;;
-         esac
-      done          
+   git add .
+   git commit -m "$1"
+   TEMP=`getopt --long -o "p" "$2"`
+   eval set -- "$TEMP"
+   while true ; do
+      case "$2" in
+         -p )
+            echo "push it baby"
+         ;;
+      esac 
+   done;            
 }
 
 
