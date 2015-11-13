@@ -36,7 +36,7 @@ commit()
 {
    git add .
    git commit -m "$2"
-   while getopts 'p:' flag; do
+   while getopts 'p' flag; do
       case "${flag}" in
          p) echo "push it baby" ;;
       esac
