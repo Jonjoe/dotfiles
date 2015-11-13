@@ -36,7 +36,8 @@ commit()
 {
     git add .
     git commit -m "$@"
-    while getopts “p” OPTION
+
+    while getopts “:p” OPTION
        do
           case $OPTION in
              p)
