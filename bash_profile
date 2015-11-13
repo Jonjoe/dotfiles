@@ -52,6 +52,13 @@ backup()
   fi
 }
 
+
+#Git Commit Workflow
+commit()
+{
+   . ~/dotfiles/scripts/commit.sh $@
+}
+
 # Generate Ghost instance
 ghost ()
 {
