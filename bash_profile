@@ -36,7 +36,7 @@ commit()
 {
    git add .
    git commit -m "$1"
-   TEMP=`getopt --long -o "p" "$2"`
+   TEMP=`getopt --long -o "p:" "$2"`
    eval set -- "$TEMP"
    while true ; do
       case "$2" in
