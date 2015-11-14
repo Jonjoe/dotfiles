@@ -1,53 +1,53 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
+" SYSTEM INITS
 set rtp+=~/.vim/bundle/Vundle.vim
-set number
+" END
+
+
+" PLUGINS 
 call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'https://github.com/VundleVim/Vundle.vim'
 Plugin 'https://github.com/vim-scripts/ScrollColors'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tomtom/tlib_vim'
-Plugin 'tpope/vim-rails'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'garbas/vim-snipmate'
-Plugin 'tpope/vim-fugitive'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'kien/ctrlp.vim'
-Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'marcweber/vim-addon-mw-utils'
-
-" autocmd vimenter * NERDTree
-
-call vundle#end()            " required
-filetype plugin indent on    " required
+Plugin 'https://github.com/tomtom/tlib_vim'
+Plugin 'https://github.com/tpope/vim-rails'
+Plugin 'https://github.com/scrooloose/nerdtree'
+Plugin 'https://github.com/Xuyuanp/nerdtree-git-plugin'
+Plugin 'https://github.com/garbas/vim-snipmate'
+Plugin 'https://github.com/tpope/vim-fugitive'
+Plugin 'https://github.com/thoughtbot/vim-rspec'
+Plugin 'https://github.com/kien/ctrlp.vim'
+Plugin 'https://github.com/ecomba/vim-ruby-refactoring'
+Plugin 'https://github.com/marcweber/vim-addon-mw-utils'
+call vundle#end()     
+" END
 
 
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-
-" guifont=Lucida_Console:h11
-
-set nocompatible                " choose no compatibility with legacy vi
-syntax enable
+" SYSTEM SETTINGS
+set nocompatible    
+filetype off       
+set number
 set encoding=utf-8
-set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation
+set showcmd             
+filetype plugin indent on
+" END
 
+
+" TYPOGRAPHY
 colorscheme monokai
+syntax enable
+" END
 
-"" Whitespace
-set nowrap                      " don't wrap lines
-set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
-set expandtab                   " use spaces, not tabs (optional)
-set backspace=indent,eol,start  " backspace through everything in insert mode
 
-"" Searching
-set hlsearch                    " highlight matches
-set incsearch                   " incremental searching
-set ignorecase                  " searches are case insensitive...
-set smartcase                   " ... unless they contain at least one capital letter
+" WHITESPACE 
+set nowrap               
+set tabstop=2 shiftwidth=2
+set expandtab            
+set backspace=indent,eol,start
+" END
+
+
+"" SEARCHING 
+set hlsearch                 
+set incsearch               
+set ignorecase             
+set smartcase
+" END
