@@ -3,35 +3,45 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " END
 
 
-" PLUGINS 
+" PLUGINS
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-scripts/ScrollColors'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-rails'
+Plugin 'evidens/vim-twig'
 Plugin 'scrooloose/nerdtree'
+Plugin 'BoundInCode/AutoFileName'
+Plugin 'tpope/vim-haml'
+Plugin 'slim-template/vim-slim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'gregsexton/MatchTag'
 Plugin 'mattn/emmet-vim'
 Plugin 'pasela/ctrlp-cdnjs'
+Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'mattn/webapi-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'marcweber/vim-addon-mw-utils'
 Plugin 'scrooloose/syntastic'
-call vundle#end()     
+" Just for fun
+Plugin 'katono/rogue.vim'
+call vundle#end()
 " END
 
 
 " SYSTEM SETTINGS
-set nocompatible    
-filetype off       
+set nocompatible
+filetype off
 set number
 set encoding=utf-8
-set showcmd             
+set showcmd
 filetype plugin indent on " Indentation
 :au FocusLost * silent! :wa " Save on focus lost
 :set cursorline
@@ -65,17 +75,17 @@ syntax enable
 " END
 
 
-" WHITESPACE 
-set nowrap               
+" WHITESPACE
+set nowrap
 set tabstop=2 shiftwidth=2
-set expandtab            
+set expandtab
 set backspace=indent,eol,start
 " END
 
 
-"" SEARCHING 
-set hlsearch                 
-set incsearch               
-set ignorecase             
+"" SEARCHING
+set hlsearch
+set incsearch
+set ignorecase
 set smartcase
 " END
