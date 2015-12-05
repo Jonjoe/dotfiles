@@ -5,18 +5,20 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 " PLUGINS 
 call vundle#begin()
-Plugin 'https://github.com/VundleVim/Vundle.vim'
-Plugin 'https://github.com/vim-scripts/ScrollColors'
-Plugin 'https://github.com/tomtom/tlib_vim'
-Plugin 'https://github.com/tpope/vim-rails'
-Plugin 'https://github.com/scrooloose/nerdtree'
-Plugin 'https://github.com/Xuyuanp/nerdtree-git-plugin'
-Plugin 'https://github.com/garbas/vim-snipmate'
-Plugin 'https://github.com/tpope/vim-fugitive'
-Plugin 'https://github.com/thoughtbot/vim-rspec'
-Plugin 'https://github.com/kien/ctrlp.vim'
-Plugin 'https://github.com/ecomba/vim-ruby-refactoring'
-Plugin 'https://github.com/marcweber/vim-addon-mw-utils'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-scripts/ScrollColors'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-rails'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'mattn/emmet-vim'
+Plugin 'pasela/ctrlp-cdnjs'
+Plugin 'mattn/webapi-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'kien/ctrlp.vim'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'marcweber/vim-addon-mw-utils'
 call vundle#end()     
 " END
 
@@ -27,9 +29,20 @@ filetype off
 set number
 set encoding=utf-8
 set showcmd             
-filetype plugin indent on
+filetype plugin indent on " Indentation
+:au FocusLost * silent! :wa " Save on focus lost
 " END
 
+" CUSTOM KEYBINDS
+nnoremap <F12> :exe ':!open % -a Google\ Chrome' <CR>
+
+" NERDTREE SETTINGS
+let NERDTreeShowBookmarks=1
+" END
+
+" EMMET SETTINGS
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" END
 
 " TYPOGRAPHY
 colorscheme monokai
