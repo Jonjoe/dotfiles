@@ -16,6 +16,7 @@ Plugin 'pasela/ctrlp-cdnjs'
 Plugin 'mattn/webapi-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'marcweber/vim-addon-mw-utils'
@@ -31,7 +32,11 @@ set encoding=utf-8
 set showcmd             
 filetype plugin indent on " Indentation
 :au FocusLost * silent! :wa " Save on focus lost
-" END
+
+" VIM STATUS BAR
+set laststatus=2 " Always show statusline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " CUSTOM KEYBINDS
 nnoremap <F12> :exe ':!open % -a Google\ Chrome' <CR>
