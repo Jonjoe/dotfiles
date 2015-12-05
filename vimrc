@@ -51,7 +51,7 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 " END
 
 " TYPOGRAPHY
-colorscheme monokai
+colorscheme molokai
 syntax enable
 " END
 
