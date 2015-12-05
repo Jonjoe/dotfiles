@@ -32,6 +32,7 @@ set encoding=utf-8
 set showcmd             
 filetype plugin indent on " Indentation
 :au FocusLost * silent! :wa " Save on focus lost
+:set cursorline
 
 " VIM STATUS BAR
 set laststatus=2 " Always show statusline
