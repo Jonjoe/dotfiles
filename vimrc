@@ -42,7 +42,11 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " CUSTOM KEYBINDS
+" Open in chrome
 nnoremap <F12> :exe ':!open % -a Google\ Chrome' <CR>
+" Kill trailing spaces
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+" END
 
 " NERDTREE SETTINGS
 let NERDTreeShowBookmarks=1
