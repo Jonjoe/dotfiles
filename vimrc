@@ -21,6 +21,7 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'marcweber/vim-addon-mw-utils'
+Plugin 'scrooloose/syntastic'
 call vundle#end()     
 " END
 
