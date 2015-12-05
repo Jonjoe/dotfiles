@@ -67,7 +67,7 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 " END
 
 " TYPOGRAPHY
-colorscheme molokai
+colorscheme monokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 let g:airline_theme='bubblegum'
