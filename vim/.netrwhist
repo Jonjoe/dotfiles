@@ -1,5 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/jonjoe/Code/coacting-styles/app/controllers'
-let g:netrw_dirhist_2='/Users/jonjoe/Code/coacting-styles/bin'
-let g:netrw_dirhist_3='/Users/jonjoe/Code'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/jonjoe/dotfiles/vim/bundle'
