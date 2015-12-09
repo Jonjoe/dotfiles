@@ -14,6 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'BoundInCode/AutoFileName'
 Plugin 'tpope/vim-haml'
 Plugin 'slim-template/vim-slim'
+Plugin 'sjl/vitality.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'gregsexton/MatchTag'
 Plugin 'mattn/emmet-vim'
@@ -43,8 +44,9 @@ set number
 set encoding=utf-8
 set showcmd
 filetype plugin indent on " Indentation
-:au FocusLost * silent! :wa " Save on focus lost
 :set cursorline
+
+
 
 " VIM STATUS BAR
 set laststatus=2 " Always show statusline
@@ -60,6 +62,16 @@ nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 
 " NERDTREE SETTINGS
 let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.DS_Store$']
+
+function! StartUp()
+  if 0 == argc()
+    NERDTree
+  end
+endfunction
+autocmd VimEnter * call StartUp()
+
 " END
 
 " EMMET SETTINGS
