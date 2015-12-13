@@ -78,9 +78,17 @@ wordpress ()
     . ~/dotfiles/scripts/wordpress.sh $@
 }
 
+dockr ()
+{
+
+  docker-machine start default
+}
+
+
 
 # ----------------------------
 
+eval $(docker-machine env default)
 
 # ----------------------------
 # Servers
