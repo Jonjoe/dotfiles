@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/jonjoe/dotfiles/vim/bundle'
+let g:netrw_dirhist_2='/Users/jonjoe/Code/angular-2-beta-boilerplate'
+let g:netrw_dirhist_3='/Users/jonjoe/Code'
+let g:netrw_dirhist_4='/Users/jonjoe/Code/angular-2-beta-boilerplate'
+let g:netrw_dirhist_5='/Users/jonjoe/Code/angular-2-beta-boilerplate/assets'
+let g:netrw_dirhist_6='/Users/jonjoe/Code/angular-2-beta-boilerplate/assets/scss'
