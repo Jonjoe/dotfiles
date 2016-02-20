@@ -13,5 +13,5 @@ cd ~/Code
 # Custom Scripts
 for SCRIPT in ~/dotfiles/autorun/*
 do
-  sh $SCRIPT
+  source $SCRIPT
 done
