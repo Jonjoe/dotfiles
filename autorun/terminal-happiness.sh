@@ -9,4 +9,4 @@ tab ()
 # Custom Commands
 alias hosts="sudo sublime /etc/hosts"
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
-alias reload=". ~/.bash_profile"
+alias reload=". ~/.zshrc"
