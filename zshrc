@@ -1,7 +1,6 @@
-# Inits
 cd ~/Code
 
-for SCRIPT in ~/dotfiles/autorun/*
+for SCRIPT in ~/Dotfiles/autorun/*
 do
   source $SCRIPT
 done
@@ -14,7 +13,7 @@ export ZSH=/Users/jonjoe/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="bureau"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -62,7 +61,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/jonjoe/.rbenv/shims:/usr/local/bin:/Users/jonjoe/.bin:/Users/jonjoe/.rbenv/shims:/usr/local/bin:/Users/jonjoe/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/Users/jonjoe/.rbenv/shims:/usr/local/bin:/Users/jonjoe/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
