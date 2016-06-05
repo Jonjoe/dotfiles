@@ -1,3 +1,4 @@
 *.swp
 .*.swp
 /vim/bundle/*
+autorun/env-vars.sh
