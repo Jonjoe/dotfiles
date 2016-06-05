@@ -13,6 +13,7 @@ rdb ()
 	bin/rails db:migrate
 	bin/rails db:seed
 }
+
 regenZSH () 
 {
 	PATH=pwd
@@ -20,7 +21,10 @@ regenZSH ()
 	regen
 	cd $PATH
 }
+
 # Custom Commands
 alias hosts="sudo sublime /etc/hosts"
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
+alias regen=". ~/.zshrc"
 alias reload=". ~/.zshrc"
+alias makeitso="sh ~/Dotfiles/makeitso.sh"
