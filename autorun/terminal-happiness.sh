@@ -6,15 +6,15 @@ tab ()
     echo -ne "\033]0;$@\007"
 }
 
-rdb () 
+rdb ()
 {
-	bin/rails db:drop
-	bin/rails db:create
-	bin/rails db:migrate
-	bin/rails db:seed
+	rails db:drop
+	rails db:create
+	rails db:migrate
+	rails db:seed
 }
 
-regenZSH () 
+regenZSH ()
 {
 	PATH=pwd
 	reload
