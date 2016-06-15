@@ -1,7 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/jonjoe/Code/marlow/app/assets/stylesheets'
-let g:netrw_dirhist_2='/Users/jonjoe/Code/marlow'
-let g:netrw_dirhist_3='/Users/jonjoe/Code/marlow/app'
-let g:netrw_dirhist_4='/Users/jonjoe/Code/marlow/app/assets'
-let g:netrw_dirhist_5='/Users/jonjoe/Code/marlow/app/assets/stylesheets'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/jonjoe/Dotfiles'
+let g:netrw_dirhist_2='/Users/jonjoe/Dotfiles/autorun'
+let g:netrw_dirhist_3='/Users/jonjoe/Dotfiles'
+let g:netrw_dirhist_4='/Users/jonjoe/Dotfiles/autorun'
