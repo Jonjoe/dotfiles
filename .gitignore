@@ -1,4 +1,5 @@
 *.swp
 .*.swp
 /vim/bundle/*
+/vim/.netrwhist
 autorun/env-vars.sh
