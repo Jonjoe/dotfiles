@@ -20,7 +20,6 @@ Plugin 'mattn/emmet-vim'
 Plugin 'cakebaker/scss-syntax.vim'
 call vundle#end()
 
-filetype plugin indent on
 
 set tabstop=2
 colorscheme monokai
@@ -30,6 +29,14 @@ let g:rehash256 = 1
 syntax enable
 " --------- END
 
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set list
+
+filetype plugin indent on
 
 " CTRLP Configs
 let g:ctrlp_reuse_window  = 'startify'
