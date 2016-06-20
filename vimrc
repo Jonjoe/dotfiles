@@ -13,8 +13,8 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neocomplete'
+"Plugin 'Shougo/neosnippet'
+"Plugin 'Shougo/neocomplete'
 Plugin 'mattn/emmet-vim'
 " Syntax
 Plugin 'cakebaker/scss-syntax.vim'
@@ -35,6 +35,8 @@ set softtabstop=2
 set expandtab
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set list
+set cursorline
+set cursorcolumn
 
 filetype plugin indent on
 
