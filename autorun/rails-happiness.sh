@@ -7,6 +7,12 @@ railsDB () {
   rails db:seed
 }
 
+herokuDB () {
+	heroku pg:reset DATABASE
+	heroku run rake db:migrate
+	heroku run rake db:seedd .select-style {
+}
+
 killRails () {
   kill -9 $(lsof -wni tcp:3000 | awk 'END {print $2}')
 }
