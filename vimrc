@@ -12,6 +12,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
+Plugin 'sjl/vitality.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'Shougo/neosnippet'
 "Plugin 'Shougo/neocomplete'
@@ -37,8 +38,12 @@ set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set list
 set cursorline
 set cursorcolumn
-
+au FocusLost * silent! wa
 filetype plugin indent on
+
+" Emmet Configs
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " CTRLP Configs
 let g:ctrlp_reuse_window  = 'startify'
