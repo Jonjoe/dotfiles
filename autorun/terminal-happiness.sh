@@ -23,6 +23,8 @@ regenZSH ()
 }
 
 # Custom Commands
+alias clear_vim="find . -name '*.sw*' -type f -delete"
+alias clear_ds="find . -name '*.DS_Store' -type f -delete"
 alias hosts="sudo sublime /etc/hosts"
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 alias regen=". ~/.zshrc"
