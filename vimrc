@@ -43,6 +43,7 @@ set cursorline
 set cursorcolumn
 au FocusLost * silent! wa
 filetype plugin indent on
+filetype plugin on
 
 " Emmet Configs
 let g:user_emmet_expandabbr_key='<Tab>'
