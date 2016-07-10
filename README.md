@@ -15,6 +15,7 @@ List and details for all the plugins used in my vim setup.
 |Emmet|http://goo.gl/CWb9KL|https://goo.gl/4MQJGV|
 |SCSS Syntax|http://goo.gl/hhbVwW|https://goo.gl/qLsSG9|
 |Fugative|http://goo.gl/E5W4Ml|https://goo.gl/Y9EIXq|
+|GitGutter|http://goo.gl/9OMn60|https://goo.gl/E77x4z|
 
 ### Custom Keybindings
 Custom keybind sfor all the plugins that I use.
