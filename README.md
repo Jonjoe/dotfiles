@@ -5,6 +5,7 @@ This section is a little collection of shortcuts from all the plugins.
 
 ### Vim Plugins
 List and details for all the plugins used in my vim setup.
+
 |Plugin|Vim Awesome|Github|
 |---|---|---|
 |Rails|http://goo.gl/LHRP5u|https://goo.gl/iICHM3|
