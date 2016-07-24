@@ -9,9 +9,7 @@ List and details for all the plugins used in my vim setup.
 |Plugin|Vim Awesome|Github|
 |---|---|---|
 |Rails|http://goo.gl/LHRP5u|https://goo.gl/iICHM3|
-|SuperTab|http://goo.gl/emJPVK|https://goo.gl/GU6fcl|
 |Endwise|http://goo.gl/oGg0pZ|https://goo.gl/npaQbo|
-|YouCompleteMe|http://goo.gl/3ciO1u|https://goo.gl/TzUG9T|
 |Surround|http://goo.gl/UB9NAl|https://goo.gl/bfVXK8|
 |Vitality|http://goo.gl/zs7QwT|https://goo.gl/cDFrgP|
 |CtrlP|http://goo.gl/NNJsFE|https://goo.gl/4R5GRH|
@@ -20,9 +18,23 @@ List and details for all the plugins used in my vim setup.
 |Fugative|http://goo.gl/E5W4Ml|https://goo.gl/Y9EIXq|
 |GitGutter|http://goo.gl/9OMn60|https://goo.gl/E77x4z|
 |Commentary|http://goo.gl/PPkuKp|https://goo.gl/Si0NIY|
+|Syntastic|http://goo.gl/g6lYZ6|https://goo.gl/joFkJO|
+|Auto Pairs|http://goo.gl/xbxkHZ|https://goo.gl/dVJ1gQ|
+|Airline|http://goo.gl/pUO7Eh|https://goo.gl/uDJNo8|
+|Easy Motion|http://goo.gl/5eu1vm|https://goo.gl/FTWKjZ|
+|Ragtag|http://goo.gl/EQaCYB|https://goo.gl/8y9AZj|
+|CSV|http://goo.gl/UIVAPN|https://goo.gl/efacZB|
+
 
 ### Custom Keybindings
-Custom keybind sfor all the plugins that I use.
+Custom keybinds for all the plugins that I use.
+
+##### System Remaps
+|Name|Keybind|
+|---|---|
+|New Buffer|Ctrl n|
+|Delete Current Buffer|Ctrl b|
+|Next Buffer|Ctrl m|
 
 ##### Code Wrapping
 |Name|Keybind|
