@@ -1,11 +1,10 @@
 set nocompatible
-" --------- TYPOGRAPHY
 set number
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 set backspace=indent,eol,start
-call vundle#begin('~/Dotfiles/vim/bundle')
 
+call vundle#begin('~/Dotfiles/vim/bundle')
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -22,13 +21,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/vitality.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-
-" Syntax
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'suan/vim-instant-markdown'
-
 call vundle#end()
 
 set tabstop=2
@@ -36,7 +32,6 @@ colorscheme monokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 syntax enable
-" --------- END
 
 set tabstop=2
 set shiftwidth=2
@@ -57,16 +52,16 @@ if has("mouse_sgr")
 else
     set ttymouse=xterm2
 end
+
 " AirLine Configs
 let g:airline_theme='bubblegum'
 let g:airline#extensions#tabline#enabled = 1
+let airline#extensions#tabline#fnamemod = ':t' 
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
-
-
 
 " Syntastic Configs
 set statusline+=%#warningmsg#
