@@ -24,7 +24,8 @@ List and details for all the plugins used in my vim setup.
 |Easy Motion|http://goo.gl/5eu1vm|https://goo.gl/FTWKjZ|
 |Ragtag|http://goo.gl/EQaCYB|https://goo.gl/8y9AZj|
 |CSV|http://goo.gl/UIVAPN|https://goo.gl/efacZB|
-
+|RSpec|http://goo.gl/004RZI|https://goo.gl/98Kr2p|
+|Ack|http://goo.gl/WR31tE|https://goo.gl/kXXgZS|
 |GitV|http://goo.gl/VV2dwX|https://goo.gl/C4y34w|
 |Multiple Cursors|http://goo.gl/Q5F3yqn|https://goo.gl/fxMncg|
 
