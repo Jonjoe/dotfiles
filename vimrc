@@ -18,6 +18,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/vitality.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
@@ -45,6 +47,8 @@ set cursorcolumn
 au FocusLost * silent! wa
 filetype plugin on
 
+" AirLine Configs
+let g:airline#extensions#tabline#enabled = 1
 
 " Syntastic Configs
 set statusline+=%#warningmsg#
