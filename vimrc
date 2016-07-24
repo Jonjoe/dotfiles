@@ -50,6 +50,13 @@ set cursorcolumn
 au FocusLost * silent! wa
 filetype plugin on
 
+" Mouse Scrolling in Vim
+set mouse=a
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
 " AirLine Configs
 let g:airline_theme='bubblegum'
 let g:airline#extensions#tabline#enabled = 1
