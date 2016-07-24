@@ -7,7 +7,6 @@ set backspace=indent,eol,start
 call vundle#begin('~/Dotfiles/vim/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
@@ -45,6 +44,17 @@ set cursorline
 set cursorcolumn
 au FocusLost * silent! wa
 filetype plugin on
+
+
+" Syntastic Configs
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Emmet Configs
 let g:user_emmet_expandabbr_key='<Tab>'
