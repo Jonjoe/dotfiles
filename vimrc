@@ -12,7 +12,6 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
-Plugin 'suan/vim-instant-markdown'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/syntastic'
 Plugin 'jiangmiao/auto-pairs'
@@ -22,17 +21,19 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/vitality.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mattn/emmet-vim'
+
 " Syntax
 Plugin 'cakebaker/scss-syntax.vim'
-call vundle#end()
+Plugin 'mattn/emmet-vim'
+Plugin 'chrisbra/csv.vim'
+Plugin 'suan/vim-instant-markdown'
 
+call vundle#end()
 
 set tabstop=2
 colorscheme monokai
 let g:molokai_original = 1
 let g:rehash256 = 1
-"let g:airline_theme='bubblegum'
 syntax enable
 " --------- END
 
