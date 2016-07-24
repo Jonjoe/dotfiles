@@ -41,6 +41,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set laststatus=2
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set list
 set cursorline
@@ -49,7 +50,15 @@ au FocusLost * silent! wa
 filetype plugin on
 
 " AirLine Configs
+let g:airline_theme='bubblegum'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+
+
 
 " Syntastic Configs
 set statusline+=%#warningmsg#
