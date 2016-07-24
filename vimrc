@@ -22,6 +22,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/vitality.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'mattn/emmet-vim'
@@ -60,6 +61,14 @@ if has("mouse_sgr")
 else
     set ttymouse=xterm2
 end
+
+
+" Multiple cursors Config
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-c>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
 
 " AirLine Configs
 let g:airline_theme='bubblegum'
