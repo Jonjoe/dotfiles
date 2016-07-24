@@ -25,6 +25,7 @@ List and details for all the plugins used in my vim setup.
 |Ragtag|http://goo.gl/EQaCYB|https://goo.gl/8y9AZj|
 |CSV|http://goo.gl/UIVAPN|https://goo.gl/efacZB|
 
+|GitV|http://goo.gl/VV2dwX|https://goo.gl/C4y34w|
 |Multiple Cursors|http://goo.gl/Q5F3yqn|https://goo.gl/fxMncg|
 
 ### Custom Keybindings
