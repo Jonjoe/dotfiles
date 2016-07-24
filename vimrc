@@ -46,6 +46,11 @@ set cursorcolumn
 au FocusLost * silent! wa
 filetype plugin on
 
+" Buffer Manipulation
+nnoremap <C-n> :enew<CR>
+nnoremap <C-b> :bdelete<CR>
+nnoremap <C-m> :bnext<CR>
+
 " Mouse Scrolling in Vim
 set mouse=a
 if has("mouse_sgr")
