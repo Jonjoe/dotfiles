@@ -25,6 +25,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'suan/vim-instant-markdown'
+Plugin 'easymotion/vim-easymotion'
 call vundle#end()
 
 set tabstop=2
