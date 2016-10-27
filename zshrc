@@ -96,3 +96,6 @@ source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="/Users/jonjoe/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$HOME/.bin:$PATH"
+eval "$(rbenv init - --no-rehash)"
