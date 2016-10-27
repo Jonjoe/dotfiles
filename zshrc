@@ -17,7 +17,8 @@ export ZSH=/Users/jonjoewhitfield/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bureau"
 
-# Uncomment the following line to use case-sensitive completion.
+eval $(thefuck --alias)
+
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
