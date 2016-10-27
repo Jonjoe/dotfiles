@@ -1,3 +1,5 @@
+sh ~/.env_vars.sh
+
 cd ~/Code
 
 for SCRIPT in ~/Dotfiles/autorun/*
