@@ -45,10 +45,10 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set laststatus=2
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-set list
+" set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set nolist
 set cursorline
-set cursorcolumn
+" set cursorcolumn
 au FocusLost * silent! wa
 filetype plugin on
 
