@@ -30,3 +30,4 @@ alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset 
 alias regen=". ~/.zshrc"
 alias reload=". ~/.zshrc"
 alias makeitso="sh ~/Dotfiles/makeitso.sh"
+alias new_react_app="create-react-app"
