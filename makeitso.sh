@@ -6,7 +6,7 @@
 # - Variables
 DIR=~/Dotfiles                    # dotfiles directory
 OLDDIR=~/Dotfiles_old             # old dotfiles backup directory
-FILES="zshrc tmux.conf vimrc"       # list of files/folders to symlink in homedir
+FILES="zshrc tmux.conf vimrc hyper.js"       # list of files/folders to symlink in homedir
 
 
 
