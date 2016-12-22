@@ -6,14 +6,6 @@ tab ()
     echo -ne "\033]0;$@\007"
 }
 
-rdb ()
-{
-	rails db:drop
-	rails db:create
-	rails db:migrate
-	rails db:seed
-}
-
 regenZSH ()
 {
 	PATH=pwd

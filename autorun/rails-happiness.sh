@@ -1,16 +1,25 @@
 #!/bim/bash
 
 # Delete database and reload it with data
-railsDB () {
+sqliteRailsDB () {
   rm -rf db/development.sqlite3
-  rails db:migrate
-  rails db:seed
+  bin/rails db:migrate
+  bin/rails db:seed
+}
+
 legacyRailsDB() {
   bin/rake db:drop
 	bin/rake db:create
 	bin/rake db:migrate
 	bin/rake db:seed
 }
+
+railsDB ()
+{
+	bin/rails db:drop
+	bin/rails db:create
+	bin/rails db:migrate
+	bin/rails db:seed
 }
 
 herokuDB () {
