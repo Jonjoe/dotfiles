@@ -5,6 +5,12 @@ railsDB () {
   rm -rf db/development.sqlite3
   rails db:migrate
   rails db:seed
+legacyRailsDB() {
+  bin/rake db:drop
+	bin/rake db:create
+	bin/rake db:migrate
+	bin/rake db:seed
+}
 }
 
 herokuDB () {
