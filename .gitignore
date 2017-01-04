@@ -8,3 +8,4 @@
 /vim/.netrwhist
 autorun/env-vars.sh
 /keys/*.pem
+autorun/local.sh
