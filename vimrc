@@ -2,8 +2,12 @@ set nocompatible
 set number
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-set backspace=indent,eol,start
 
+call vundle#begin()
+	Plugin 'VundleVim/Vundle.vim'
+call vundle#end() 
+
+set backspace=indent,eol,start
 set tabstop=2
 colorscheme monokai
 let g:molokai_original = 1
