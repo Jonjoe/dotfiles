@@ -1,5 +1,7 @@
 sh ~/.env_vars.sh
 
+export PATH="./node_modules/.bin:$PATH"
+
 cd ~/Code
 
 for SCRIPT in ~/Dotfiles/autorun/*
@@ -53,6 +55,7 @@ eval $(thefuck --alias)
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
+HISTFILE=~/.zsh_history
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
