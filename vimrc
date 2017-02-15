@@ -10,6 +10,7 @@ call vundle#begin()
 	Plugin 'kien/ctrlp.vim'
 	Plugin 'valloric/youcompleteme'	
 
+	Plugin 'junegunn/vim-easy-align'
 
 	" ==== Style Plugins
 	Plugin 'vim-airline/vim-airline'
@@ -32,6 +33,8 @@ call vundle#end()
 
 set backspace=indent,eol,start
 set tabstop=2
+set expandtab
+
 colorscheme monokai
 let g:molokai_original = 1
 let g:rehash256 = 1
