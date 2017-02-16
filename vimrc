@@ -61,6 +61,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1 
 
 
+" | CtrlP 
+" |------------------------
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " | Typescript
 " |------------------------
 let g:typescript_compiler_binary = 'tsc'
