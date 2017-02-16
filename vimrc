@@ -9,7 +9,7 @@ call vundle#begin()
 	Plugin 'shougo/vimproc.vim'
 	Plugin 'kien/ctrlp.vim'
 	Plugin 'valloric/youcompleteme'	
-
+  Plugin 'mattn/emmet-vim'
 	Plugin 'junegunn/vim-easy-align'
 
 	" ==== Style Plugins
