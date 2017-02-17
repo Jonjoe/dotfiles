@@ -4,27 +4,26 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
-	Plugin 'VundleVim/Vundle.vim'
-	Plugin 'scrooloose/syntastic'
-	Plugin 'shougo/vimproc.vim'
-	Plugin 'kien/ctrlp.vim'
-	Plugin 'valloric/youcompleteme'	
-
-	Plugin 'junegunn/vim-easy-align'
+  Plugin 'VundleVim/Vundle.vim'
+  Plugin 'scrooloose/syntastic'
+  Plugin 'shougo/vimproc.vim'
+  Plugin 'kien/ctrlp.vim'
+  Plugin 'valloric/youcompleteme'	
   Plugin 'tpope/vim-fugitive'
+  Plugin 'junegunn/vim-easy-align'
 
 	" ==== Style Plugins
-	Plugin 'vim-airline/vim-airline'
-	Plugin 'vim-airline/vim-airline-themes'
-	Plugin 'powerline/fonts'
+  Plugin 'vim-airline/vim-airline'
+  Plugin 'vim-airline/vim-airline-themes'
+  Plugin 'powerline/fonts'
 	
 	" ==== Rails Plugins
-	Plugin 'tpope/vim-rails'
+  Plugin 'tpope/vim-rails'
 	
 	" ==== Typescript Plugins
-	Plugin 'leafgarland/typescript-vim'
-	Plugin 'Quramy/vim-js-pretty-template'
-	Plugin 'jiangmiao/auto-pairs'
+  Plugin 'leafgarland/typescript-vim'
+  Plugin 'Quramy/vim-js-pretty-template'
+  Plugin 'jiangmiao/auto-pairs'
 call vundle#end() 
 
 
