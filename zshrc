@@ -1,6 +1,7 @@
 sh ~/.env_vars.sh
 
 export PATH="./node_modules/.bin:$PATH"
+export DATABASE_BACKUP_PATH="/Users/$(whoami)/Data/base.backup" 
 
 cd ~/Code
 
