@@ -11,6 +11,7 @@ call vundle#begin()
 	Plugin 'valloric/youcompleteme'	
 
 	Plugin 'junegunn/vim-easy-align'
+  Plugin 'tpope/vim-fugitive'
 
 	" ==== Style Plugins
 	Plugin 'vim-airline/vim-airline'
