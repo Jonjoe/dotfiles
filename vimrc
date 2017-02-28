@@ -20,7 +20,13 @@ call vundle#begin()
 	" ==== Rails Plugins
 	Plugin 'tpope/vim-rails'
 	
-	" ==== Typescript Plugins
+
+	" ==== Javascript Plugins
+  Plugin 'pangloss/vim-javascript'
+  Plugin 'mxw/vim-jsx'
+  Plugin 'mustache/vim-mustache-handlebars'
+	
+  " ==== Typescript Plugins
 	Plugin 'leafgarland/typescript-vim'
 	Plugin 'Quramy/vim-js-pretty-template'
 	Plugin 'jiangmiao/auto-pairs'
