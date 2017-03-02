@@ -7,12 +7,13 @@ call vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'scrooloose/syntastic'
 	Plugin 'shougo/vimproc.vim'
-	Plugin 'kien/ctrlp.vim'
 	Plugin 'valloric/youcompleteme'	
   Plugin 'mattn/emmet-vim'
 	Plugin 'junegunn/vim-easy-align'
-
-	" ==== Style Plugins
+  Plugin 'scrooloose/nerdtree'  
+  Plugin 'Xuyuanp/nerdtree-git-plugin'
+	
+  " ==== Style Plugins
 	Plugin 'vim-airline/vim-airline'
 	Plugin 'vim-airline/vim-airline-themes'
 	Plugin 'powerline/fonts'
@@ -20,7 +21,6 @@ call vundle#begin()
 	" ==== Rails Plugins
 	Plugin 'tpope/vim-rails'
 	
-
 	" ==== Javascript Plugins
   Plugin 'pangloss/vim-javascript'
   Plugin 'mxw/vim-jsx'
@@ -66,10 +66,9 @@ set tags=./tags;
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1 
 
-
-" | CtrlP 
+" | NERDTree 
 " |------------------------
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+map <C-n> :NERDTreeToggle<CR>
 
 " | Typescript
 " |------------------------
