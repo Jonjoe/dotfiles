@@ -7,12 +7,13 @@ call vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'scrooloose/syntastic'
 	Plugin 'shougo/vimproc.vim'
-	Plugin 'valloric/youcompleteme'	
   Plugin 'mattn/emmet-vim'
 	Plugin 'junegunn/vim-easy-align'
   Plugin 'scrooloose/nerdtree'  
   Plugin 'Xuyuanp/nerdtree-git-plugin'
-	
+  Plugin 'airblade/vim-gitgutter'
+  Plugin 'ctrlpvim/ctrlp.vim'
+  
   " ==== Style Plugins
 	Plugin 'vim-airline/vim-airline'
 	Plugin 'vim-airline/vim-airline-themes'
@@ -25,11 +26,13 @@ call vundle#begin()
   Plugin 'pangloss/vim-javascript'
   Plugin 'mxw/vim-jsx'
   Plugin 'mustache/vim-mustache-handlebars'
-	
+
+  " ==== CSS Plugins
+  Plugin 'groenewege/vim-less'
+  	
   " ==== Typescript Plugins
 	Plugin 'leafgarland/typescript-vim'
 	Plugin 'Quramy/vim-js-pretty-template'
-	Plugin 'jiangmiao/auto-pairs'
 call vundle#end() 
 
 
@@ -52,11 +55,6 @@ syntax enable
 " | Plugin Configs
 " | =======================
 
-" | YouCompleteMe 
-" |------------------------
-let g:ycm_keep_logfiles = 1
-let g:ycm_log_level = 'debug'
-
 " | CTags 
 " |------------------------
 set tags=./tags;
@@ -65,6 +63,10 @@ set tags=./tags;
 " |------------------------
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1 
+
+" | CtrlP
+" |------------------------
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " | NERDTree 
 " |------------------------
