@@ -1,15 +1,3 @@
-sh ~/.env_vars.sh
-
-export PATH="./node_modules/.bin:$PATH"
-
-cd ~/Code
-
-for SCRIPT in ~/Dotfiles/autorun/*
-do
-  source $SCRIPT
-done
-
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$(whoami)/.oh-my-zsh"
 
@@ -102,3 +90,20 @@ export NVM_DIR="/Users/jonjoe/.nvm"
 
 export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
+export PATH="./node_modules/.bin:$PATH"
+
+# ===========================
+# | Custom Code Here
+# ===========================
+
+# Load hidden environment variables
+. ~/.environment_variables.sh
+
+# Auto navigate to Code folder and list contents
+cd ~/Code && ll
+
+# Load all scripts in autorun folder
+for SCRIPT in ~/Dotfiles/autorun/*
+do
+  source $SCRIPT
+done
