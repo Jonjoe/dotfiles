@@ -91,6 +91,7 @@ export NVM_DIR="/Users/jonjoe/.nvm"
 export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
 export PATH="./node_modules/.bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # ===========================
 # | Custom Code Here
