@@ -55,7 +55,6 @@ module.exports = {
   plugins: [
     "hyperterm-title",
     "hyper-font-smoothing",
-    "hyperterm-1password",
     "hyper-blink",
     "hyperchart",
     "hyper-tab-icons"

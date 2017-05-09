@@ -1,13 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/$(whoami)/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bureau"
-
-eval $(thefuck --alias)
+ZSH_THEME="steeef"
 
 # CASE_SENSITIVE="true"
 
@@ -55,8 +53,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/jonjoe/.rbenv/shims:/usr/local/bin:/Users/jonjoe/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="/Users/jonjoe/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH="$HOME/.bin:$PATH"
@@ -98,13 +95,13 @@ export PATH="/usr/local/sbin:$PATH"
 # ===========================
 
 # Load hidden environment variables
-. ~/.environment_variables.sh
+. $HOME/.environment_variables.sh
 
 # Auto navigate to Code folder and list contents
-cd ~/Code && ll
+cd $HOME/Code && ls -la
 
 # Load all scripts in autorun folder
-for SCRIPT in ~/Dotfiles/autorun/*
+for SCRIPT in $HOME/Dotfiles/autorun/*
 do
   source $SCRIPT
 done
