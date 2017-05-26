@@ -9,6 +9,15 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+
+" Terminal Configs
+	" Disable annoying bell sound
+	set noerrorbells visualbell t_vb=
+	if has('autocmd')
+  	autocmd GUIEnter * set visualbell t_vb=
+	endif
+" End of Terminal Configs
 
 " NerdTree Configs
 let g:NERDTreeWinPos = "right" 
