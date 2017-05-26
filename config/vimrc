@@ -4,12 +4,13 @@ filetype off
 " Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'scrooloose/nerdtree.git'
+	Plugin 'flazz/vim-colorschemes'
+	Plugin 'junegunn/fzf'
+	Plugin 'junegunn/fzf.vim'
+	Plugin 'tpope/vim-fugitive'
+	Plugin 'airblade/vim-gitgutter'
 
 " Terminal Configs
 	" Disable annoying bell sound
