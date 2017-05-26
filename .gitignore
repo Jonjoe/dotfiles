@@ -1,4 +1,10 @@
 /**/*.sw* 
- 
-/vim/bundle 
 /vim/.netrwhist 
+
+/vim/bundle/nerdtree
+/vim/bundle/fzf.vim
+/vim/bundle/fzf
+/vim/bundle/vim-gitgutter
+/vim/bundle/vim-fugitive
+/vim/bundle/vim-colorschemes
+

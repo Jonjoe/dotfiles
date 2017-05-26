@@ -14,6 +14,12 @@ regenZSH ()
 	cd $PATH
 }
 
+vimPlugins()
+{
+	vim +PluginInstall +qall
+	dos2unix ~/Dotfiles/vim/**/*
+}
+
 # Custom Commands
 alias clear_vim="find . -name '*.sw*' -type f -delete"
 alias clear_ds="find . -name '*.DS_Store' -type f -delete"
