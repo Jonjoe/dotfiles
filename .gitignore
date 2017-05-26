@@ -1,6 +1,4 @@
 /**/*.sw* 
  
-vim/bundle 
-vim/.netrwhist 
-autorun/env-vars.sh 
-autorun/local.sh 
+/vim/bundle 
+/vim/.netrwhist 
