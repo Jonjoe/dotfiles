@@ -1,8 +1,4 @@
-*.swp 
-.*.swp 
-.*.swo 
-.*.swq 
-.*.swr 
+/**/*.sw* 
  
 vim/bundle 
 vim/.netrwhist 
