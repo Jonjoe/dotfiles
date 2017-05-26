@@ -27,3 +27,5 @@ for SCRIPT in $HOME/Dotfiles/autorun/*
 do
   source $SCRIPT
 done
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
