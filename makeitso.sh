@@ -1,7 +1,6 @@
-BOLD=$(tput bold)
-NORMAL=$(tput sgr0)
-
 # Variables
+NORMAL=$(tput sgr0)
+BOLD=$(tput bold)
 ROOT=$(pwd)
 
 echo "Constructing Symlinks"
@@ -21,9 +20,5 @@ echo "Refreshing .vim"
 
 rm -rf ~/.vim
 ln -s "$ROOT/vim" ~/.vim
-
-dos2unix /mnt/c/Users/me/Dotfiles/vim/bundle/**/*
-vim +PluginInstall +qall
-dos2unix /mnt/c/Users/me/Dotfiles/vim/bundle/**/*
 
 echo "DONE"
