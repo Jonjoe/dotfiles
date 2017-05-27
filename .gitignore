@@ -1,6 +1,6 @@
 /**/*.sw* 
 /vim/.netrwhist 
-
+/config/environment_variables.sh
 /vim/bundle/nerdtree
 /vim/bundle/fzf.vim
 /vim/bundle/fzf
