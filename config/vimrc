@@ -11,6 +11,7 @@ call vundle#rc()
 	Plugin 'junegunn/fzf.vim'
 	Plugin 'tpope/vim-fugitive'
 	Plugin 'airblade/vim-gitgutter'
+" End of Plugins
 
 " Terminal Configs
 	" Disable annoying bell sound
@@ -63,8 +64,6 @@ let g:NERDTreeWinPos = "right"
 
 	let g:fzf_history_dir = '~/.local/share/fzf-history'
 " END of Fzf Config
-
-
 
 " Syntax and Style
 set tabstop=2
