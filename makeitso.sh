@@ -4,26 +4,26 @@ NORMAL=$(tput sgr0)
 # Variables
 ROOT=$(pwd)
 
-read -r -p "Are you sure? Please note: this will delete your ~/.vim folder and ~ dotfiles [y/N] " $REPLY
+echo "Constructing Symlinks"
 
-if [[ $REPLY =~ ^[Yy]$ ]]
-  echo "Constructing Symlinks"
+for FILE in $ROOT/config/* 
+do
+  FILENAME=$(basename $FILE)
+  rm -rf ~/.$FILENAME
 
-  for FILE in $ROOT/config/* 
-  do
-    FILENAME=$(basename $FILE)
-    rm -rf ~/.$FILENAME
+  ln -s $FILE ~/.$FILENAME
 
-    ln -s $FILE ~/.$FILENAME
+  echo "--- $BOLD$FILENAME$NORMAL"
+done
 
-    echo "--- $BOLD$FILENAME$NORMAL"
-  done
+echo "DONE"
+echo "Refreshing .vim"
 
-  echo "Done"
-  echo "refreshing .vim"
+rm -rf ~/.vim
+ln -s "$ROOT/vim" ~/.vim
 
-  rm -rf ~/.vim
-  ln -s "$ROOT/vim" ~/.vim
-then
-  echo "KBai"
-fi
+dos2unix /mnt/c/Users/me/Dotfiles/vim/bundle/**/*
+vim +PluginInstall +qall
+dos2unix /mnt/c/Users/me/Dotfiles/vim/bundle/**/*
+
+echo "DONE"
