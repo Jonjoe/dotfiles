@@ -11,6 +11,8 @@ call vundle#rc()
 	Plugin 'junegunn/fzf.vim'
 	Plugin 'tpope/vim-fugitive'
 	Plugin 'airblade/vim-gitgutter'
+	Plugin 'thoughtbot/vim-rspec'
+	Plugin 'tpope/vim-rbenv'
 " End of Plugins
 
 " Terminal Configs
@@ -20,6 +22,12 @@ call vundle#rc()
   	autocmd GUIEnter * set visualbell t_vb=
 	endif
 " End of Terminal Configs
+
+" Rspec Configs
+map <Leader>rsc :call RunCurrentSpecFile()<CR>
+map <Leader>rsn :call RunNearestSpec()<CR>
+map <Leader>rsl :call RunLastSpec()<CR>
+map <Leader>rs :call RunAllSpecs()<CR>
 
 " NerdTree Configs
 let g:NERDTreeWinPos = "right" 

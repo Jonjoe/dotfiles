@@ -1,3 +1,10 @@
+# Path Updates
+	export PATH="$HOME/.bin:$PATH"
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	export PATH="./node_modules/.bin:$PATH"
+	export PATH="/usr/local/sbin:$PATH"
+# End of Path Updates
+
 # ZSH Configs
 	export ZSH="$HOME/.oh-my-zsh"
 	
@@ -16,13 +23,6 @@
 # Rbenv Config
 	eval "$(rbenv init - --no-rehash)"
 # End of Rbenv Config
-
-# Path Updates
-	export PATH="$HOME/.bin:$PATH"
-	export PATH="$HOME/.rbenv/bin:$PATH"
-	export PATH="./node_modules/.bin:$PATH"
-	export PATH="/usr/local/sbin:$PATH"
-# End of Path Updates
 
 # Load all scripts in autorun folder
 	for SCRIPT in $HOME/Dotfiles/autorun/*
