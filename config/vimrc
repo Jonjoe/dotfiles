@@ -13,6 +13,7 @@ call vundle#rc()
 	Plugin 'airblade/vim-gitgutter'
 	Plugin 'thoughtbot/vim-rspec'
 	Plugin 'tpope/vim-rbenv'
+	Plugin 'jceb/vim-orgmode'
 " End of Plugins
 
 " Terminal Configs
@@ -85,3 +86,4 @@ let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
 set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
 
 filetype plugin on
+filetype plugin indent on

@@ -1,9 +1,10 @@
 # Path Updates
-	export PATH="$HOME/.bin:$PATH"
-	export PATH="$HOME/.rbenv/bin:$PATH"
-	export PATH="./node_modules/.bin:$PATH"
+	export PATH="~/.bin:$PATH"
+	export PATH="~/.rbenv/bin:$PATH"
+	export PATH="~/./node_modules/.bin:$PATH"
 	export PATH="/usr/local/sbin:$PATH"
-# End of Path Updates
+	export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
+	# End of Path Updates
 
 # ZSH Configs
 	export ZSH="$HOME/.oh-my-zsh"
@@ -34,3 +35,4 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 . $HOME/.environment_variables.sh
 cd $HOME/Code && ls -la
+export DOCKER_HOST='tcp://0.0.0.0:2375'
