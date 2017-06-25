@@ -33,5 +33,5 @@
 # End of autoscripts
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-. $HOME/.environment_variables.sh
+. ~/.environment_variables.sh
 cd $HOME/Projects && ls -la
