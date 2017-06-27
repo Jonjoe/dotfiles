@@ -1,3 +1,5 @@
 **/*.sw* 
 vim/.netrwhist 
 vim/bundle
+
+config/secret_environment_variables\.sh
