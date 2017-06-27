@@ -1,7 +1,6 @@
 . ~/.environment_variables.sh
 . ~/.secret_environment_variables.sh
 
-
 # ZSH Configs
 	export ZSH="$HOME/.oh-my-zsh"
 	
