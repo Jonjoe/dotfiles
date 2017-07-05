@@ -6,6 +6,7 @@
 	export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 # End of Path Updates
 
+export NODE_ENV='development'
 export PG_USERNAME=postgres
 export PG_PASSWORD=password
 export EDITOR=vim
