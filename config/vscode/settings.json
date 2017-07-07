@@ -1,0 +1,5 @@
+{
+    "typescript.check.npmIsInstalled": false,
+    "editor.fontFamily": "'Fira Code Retina', 'Courier New', monospace",
+    "files.autoSave": "onFocusChange"
+}
