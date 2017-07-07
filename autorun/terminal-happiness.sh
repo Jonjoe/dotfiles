@@ -12,6 +12,13 @@ vim_plugins()
 	dos2unix ~/Dotfiles/vim/**/*
 }
 
+die_motherfucker_die() {
+	sudo mv /var/lib/dpkg/info/$1.* /tmp/
+	sudo dpkg --remove --force-remove-reinstreq $1
+	sudo apt-get remove $1
+	sudo apt-get autoremove && sudo apt-get autoclean
+}
+
 # Custom Commands
 alias root="cd /mnt/c/Users/me && ls -la"
 alias clear_vim="find . -name '*.sw*' -type f -delete"
