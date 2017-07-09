@@ -1,3 +1,5 @@
+# $DOTFILES_PATH is an environment variable 
+
 . ~/.environment_variables.sh
 . ~/.secret_environment_variables.sh
 
@@ -21,7 +23,7 @@
 # End of Rbenv Config
 
 # Load all scripts in autorun folder
-	for SCRIPT in ~/Projects/Dotfiles/autorun/*
+	for SCRIPT in $DOTFILES_PATH/autorun/*
 	do
   	source $SCRIPT
 	done
