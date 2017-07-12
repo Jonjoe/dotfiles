@@ -5,7 +5,6 @@ NORMAL=$(tput sgr0)
 BOLD=$(tput bold)
 ROOT=$(pwd)
 
-
 # Functions ----------------------------------------------------------------------------
 
 # Decide what operating sytsem we are using.
@@ -59,7 +58,7 @@ if [ "$HOST_OS" = "Windows" ]; then
 	sudo apt-get autoclean >&-
 
 	echo "--- Install WSL dependencies."
-	sudo apt-get -y install zsh libssl-dev libreadline-dev zlib1g-dev >&-
+	sudo apt-get -y install zsh libssl-dev libreadline-dev zlib1g-dev libtool pkg-config build-essential autoconf automake libzmq-dev >&-
 
 	echo "Done!"
 
