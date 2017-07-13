@@ -28,7 +28,6 @@ hostOSCheck() {
 	eval $__passed_var="'$returned_value'"	
 }
 
-
 # Operating system specific actions ----------------------------------------------------
 
 echo ""
@@ -60,18 +59,18 @@ if [ "$HOST_OS" = "Windows" ]; then
 	curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - >&-
 	
 	echo "--- Install WSL dependencies."
-	sudo apt-get -y git install zsh libssl-dev libreadline-dev zlib1g-dev libtool pkg-config build-essential autoconf automake libzmq-dev >&-
+	sudo apt-get -y install git zsh libssl-dev libreadline-dev zlib1g-dev libtool pkg-config build-essential autoconf automake libzmq-dev >&-
 	
 	echo "--- Install Node/NPM and Nave Virtual Node."
 	sudo apt-get install -y nodejs >&-
-	sudo chown -R $(whoami) $(npm config get prefix)/lib/nodejs >&-
-	sudo chown -R $(whoami) $(npm config get prefix)/lib/node_modules >&-
-	sudo chown -R $(whoami) $(npm config get prefix)/bin/node >&-
-	sudo chown -R $(whoami) $(npm config get prefix)/bin/nodejs >&-
-	
-	echo "--- NODE System Packages." 
-	npm install -g nave webpack gulp bower nodemon >&-
-	echo "Done!"
+	npm config set prefix '~/.npm-global'
+
+	if [ ! -d ~/.npm-global ]; then
+		NPM_GLOBAL_STATUS="NPM Global:$BOLD Installed $NORMAL" 
+		mkdir ~/.npm-global		
+	else
+		NPM_GLOBAL_STATUS="NPM Global: Already Installed"
+	fi
 
 	echo ""
 fi
@@ -81,12 +80,6 @@ if [ "$HOST_OS" = "Ubuntu" ]; then
 fi
 
 # Unix tooling installs ----------------------------------------------------------------
-# if [ ! -d ~/.nvm ]; then
-# 	NVM_STATUS="NVM:$BOLD Installed $NORMAL"
-# 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash >&-
-# else
-# 	NVM_STATUS="NVM: Already Installed"
-# fi
 
 if [ ! -d ~/.rbenv ]; then
 	RBENV_STATUS="Rbenv:$BOLD Installed $NORMAL"
@@ -121,21 +114,12 @@ else
 	VUNDLE_STATUS="Vundle: Already Installed"
 fi
 
-if [ ! -d ~/.oh-my-zsh ]; then
-	OMZ_STATUS="OhMyZsh:$BOLD Installed $NORMAL" 
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" >&-
-else
-	OMZ_STATUS="OhMyZsh: Already Installed"
-fi
-
-
 echo "Tooling Installs"
-# echo "--- $NVM_STATUS"
+echo "--- $NPM_GLOBAL_STATUS"
 echo "--- $RBENV_STATUS"
 echo "--- $RBUILD_STATUS"
 echo "--- $FZF_STATUS"
 echo "--- $VUNDLE_STATUS"
-echo "--- $OMZ_STATUS"
 echo "Done"
 
 echo ""
@@ -150,6 +134,12 @@ do
   echo "--- $BOLD$(basename $FILE)$NORMAL"
 done
 echo "Done"
+
+. ~/.bashrc
+
+echo "--- NODE System Packages." 
+npm install -g nave webpack gulp bower nodemon yarn >&-
+echo "Done!"
 
 echo ""
 echo "FINISHED"
