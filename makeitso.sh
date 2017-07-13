@@ -47,19 +47,30 @@ if [ "$HOST_OS" = "Windows" ]; then
 	sudo cp "$ROOT/config/vscode/settings.json" "$WIN_HOME/AppData/Roaming/Code/User/settings.json"
 
 	echo "--- Update and clean WSL (This will take about 30s)."
+	sudo dpkg --configure -a
 	echo "--- --- Update"
 	sudo apt-get -y update >&-
-	echo "--- --- Skipping Upgrade NIY"
-	sudo apt-get -y upgrade >&-
 	echo "--- --- Dist Upgrade"
 	sudo apt-get -y dist-upgrade >&-
-	echo "--- --- Garbage Collection"
-	sudo apt-get autoremove >&-
-	sudo apt-get autoclean >&-
+	echo "--- --- Garbage Collection"''
+	sudo apt-get -y autoremove >&-
+	sudo apt-get -y autoclean >&-
 
+	echo "--- Install package sources."
+	curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - >&-
+	
 	echo "--- Install WSL dependencies."
-	sudo apt-get -y install zsh libssl-dev libreadline-dev zlib1g-dev libtool pkg-config build-essential autoconf automake libzmq-dev >&-
-
+	sudo apt-get -y git install zsh libssl-dev libreadline-dev zlib1g-dev libtool pkg-config build-essential autoconf automake libzmq-dev >&-
+	
+	echo "--- Install Node/NPM and Nave Virtual Node."
+	sudo apt-get install -y nodejs >&-
+	sudo chown -R $(whoami) $(npm config get prefix)/lib/nodejs >&-
+	sudo chown -R $(whoami) $(npm config get prefix)/lib/node_modules >&-
+	sudo chown -R $(whoami) $(npm config get prefix)/bin/node >&-
+	sudo chown -R $(whoami) $(npm config get prefix)/bin/nodejs >&-
+	
+	echo "--- NODE System Packages." 
+	npm install -g nave webpack gulp bower nodemon >&-
 	echo "Done!"
 
 	echo ""
@@ -70,12 +81,12 @@ if [ "$HOST_OS" = "Ubuntu" ]; then
 fi
 
 # Unix tooling installs ----------------------------------------------------------------
-if [ ! -d ~/.nvm ]; then
-	NVM_STATUS="NVM:$BOLD Installed $NORMAL"
-	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash >&-
-else
-	NVM_STATUS="NVM: Already Installed"
-fi
+# if [ ! -d ~/.nvm ]; then
+# 	NVM_STATUS="NVM:$BOLD Installed $NORMAL"
+# 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash >&-
+# else
+# 	NVM_STATUS="NVM: Already Installed"
+# fi
 
 if [ ! -d ~/.rbenv ]; then
 	RBENV_STATUS="Rbenv:$BOLD Installed $NORMAL"
@@ -95,7 +106,7 @@ fi
 if [ ! -d ~/.fzf ]; then
 	FZF_STATUS="Fzf:$BOLD Installed $NORMAL"
 	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf >&-
-	~/.fzf/install >&-
+	~/.fzf/install -y >&-
 else
 	FZF_STATUS="Fzf: Already Installed"
 fi
@@ -119,7 +130,7 @@ fi
 
 
 echo "Tooling Installs"
-echo "--- $NVM_STATUS"
+# echo "--- $NVM_STATUS"
 echo "--- $RBENV_STATUS"
 echo "--- $RBUILD_STATUS"
 echo "--- $FZF_STATUS"
