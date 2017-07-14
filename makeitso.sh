@@ -59,7 +59,7 @@ if [ "$HOST_OS" = "Windows" ]; then
 	curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - >&-
 	
 	echo "--- Install WSL dependencies."
-	sudo apt-get -y install git zsh libssl-dev libreadline-dev zlib1g-dev libtool pkg-config build-essential autoconf automake libzmq-dev >&-
+	sudo apt-get -y install git zsh libssl-dev libfontconfig libreadline-dev zlib1g-dev libtool pkg-config build-essential autoconf automake libzmq-dev >&-
 	
 	echo "--- Install Node/NPM and Nave Virtual Node."
 	sudo apt-get install -y nodejs >&-
