@@ -1,6 +1,8 @@
-cd $HOME/Projects && ls -la
+# cd $HOME/Projects && ls -la
 
 . ~/.environment_variables.sh
 . ~/.secret_environment_variables.sh
+
+eval "$(rbenv init -)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
