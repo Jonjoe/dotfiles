@@ -15,5 +15,6 @@ if [ "$HOST_OS" = "Ubuntu" ]; then
   . $ROOT/makeitso/ubuntu-config.sh
 fi
 
+. $ROOT/makeitso/deploy-configs.sh
 . $ROOT/makeitso/unix-tooling.sh
 . $ROOT/makeitso/node-setup.sh

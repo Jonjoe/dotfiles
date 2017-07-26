@@ -1,8 +1,16 @@
-# cd $HOME/Projects && ls -la
+#!/bin/bash
 
-. '~/.environment_variables.sh.
-. '~/.secret_environment_variables.sh
-. '~/.extra-paths.sh'
+cd $HOME/Projects && ls -la
+
+. ~/.extra-paths.sh
+. ~/.environment_variables.sh
+. ~/.secret_environment_variables.sh
+
+
+for path in "${ENV_PATHS[@]}"
+do
+  export PATH="${path}:{$PATH}"
+done
 
 for SCRIPT in ~/Projects/Personal/dotfiles/autorun/*
 do
