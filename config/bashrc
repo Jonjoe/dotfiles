@@ -1,7 +1,13 @@
 # cd $HOME/Projects && ls -la
 
-. ~/.environment_variables.sh
-. ~/.secret_environment_variables.sh
+. '~/.environment_variables.sh.
+. '~/.secret_environment_variables.sh
+. '~/.extra-paths.sh'
+
+for SCRIPT in ~/Projects/Personal/dotfiles/autorun/*
+do
+  source $SCRIPT
+done
 
 eval "$(rbenv init -)"
 
