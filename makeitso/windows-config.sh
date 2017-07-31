@@ -11,17 +11,17 @@ WIN_HOME="/mnt/c/Users/$WINDOWS_USERNAME"
 echo "--- VSCode Configs"
 sudo cp "$ROOT/config/vscode/settings.json" "$WIN_HOME/AppData/Roaming/Code/User/settings.json"
 
-echo "--- Update and clean WSL (This will take about 30s)."
+echo "--- Update and clean WSL (This wi ll take about 30s)."
 sudo dpkg --configure -a
 echo "--- --- Update"
 sudo apt-get -y update >&-
 echo "--- --- Dist Upgrade"
 sudo apt-get -y dist-upgrade >&-
 echo "--- --- Garbage Collection"''
-sudo apt-get -y autoremove >&-
+sudo apt-get -y autoremove >&-  
 sudo apt-get -y autoclean >&-
 
-echo "--- Install package sources."
+echo "--- Install package sources." 
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - >&-
 
 echo "--- Install WSL dependencies."

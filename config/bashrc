@@ -9,7 +9,7 @@ cd $HOME/Projects && ls -la
 
 for path in "${ENV_PATHS[@]}"
 do
-  export PATH="${path}:{$PATH}"
+  export PATH="$path:$PATH"
 done
 
 for SCRIPT in ~/Projects/Personal/dotfiles/autorun/*
