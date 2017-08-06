@@ -1,4 +1,3 @@
-#!/bin/bash
 FILEPATH=$(realpath $0)
 ROOT=$(dirname $FILEPATH)
 

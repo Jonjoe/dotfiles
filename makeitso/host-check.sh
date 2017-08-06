@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Decide what operating sytsem we are using.
 # Returns STRING ['Windows' | 'Ubuntu']
 hostOSCheck() {

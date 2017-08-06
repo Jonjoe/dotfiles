@@ -1,4 +1,4 @@
-These are my dotfiles. becareful! Here be dragons and bad bad jujuu. 
+These are my dotfiles. Be careful! Here be dragons and bad bad jujuu. 
 
 # Vim Cheatsheet
 This section is a little collection of shortcuts from all the plugins.

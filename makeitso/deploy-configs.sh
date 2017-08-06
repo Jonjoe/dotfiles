@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Deploy configs & dotfiles -------------------------------------------------------------
 echo "Constructing Symlinks"
 cd $ROOT
@@ -11,4 +9,4 @@ do
 done
 echo "Done"
 
-. ~/.bashrc
+. ~/.bashrc >&-

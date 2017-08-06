@@ -1,5 +1,3 @@
-#!/bin/bash
-
 echo "... is Windows"
 echo ""
 
