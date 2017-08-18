@@ -1,3 +1,10 @@
+# | HostCheck =====================================================
+# -----------------------------------------------------------------
+# Check the OS of the host and return its name.
+#
+
+# hostOSCheck() ======================================================
+# -----------------------------------------------------------------
 # Decide what operating sytsem we are using.
 # Returns STRING ['Windows' | 'Ubuntu']
 hostOSCheck() {

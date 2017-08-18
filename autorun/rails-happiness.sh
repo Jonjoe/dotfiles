@@ -1,10 +1,10 @@
-# Delete database and reload it with data
-sqliteRailsDB () {
-  rm -rf db/development.sqlite3
-  bin/rails db:migrate
-  bin/rails db:seed
-}
+# | Git SCM Helpers =================================================
+# -----------------------------------------------------------------
+# Helper functions for Git SCM tasks.
+#
 
+# Legacy Rails DB Init ============================================
+# -----------------------------------------------------------------
 legacyRailsDB() {
   bin/rake db:drop
 	bin/rake db:create
@@ -12,6 +12,8 @@ legacyRailsDB() {
 	bin/rake db:seed
 }
 
+# Rails DB Init ===================================================
+# -----------------------------------------------------------------
 railsDB ()
 {
 	bin/rails db:drop
@@ -20,12 +22,16 @@ railsDB ()
 	bin/rails db:seed
 }
 
+# Heroku Rails DB Init ============================================
+# -----------------------------------------------------------------
 herokuDB () {
   heroku pg:reset DATABASE
   heroku run rake db:migrate
   heroku run rake db:seed
 }
 
+# Kill orphaned rails processes ===================================
+# -----------------------------------------------------------------
 killRails () {
   kill -9 $(lsof -wni tcp:3000 | awk 'END {print $2}')
 }

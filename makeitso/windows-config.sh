@@ -1,14 +1,24 @@
+# | Windows Configs ===============================================
+# -----------------------------------------------------------------
+# Configure Windows Subsystem for Linux.
+
 echo "... is Windows"
 echo ""
 
 echo "Windows Configs"
 
+# Vars ============================================================
+# -----------------------------------------------------------------
 WINDOWS_USERNAME="me"
 WIN_HOME="/mnt/c/Users/$WINDOWS_USERNAME"
 
+# VSCode Configs ==================================================
+# -----------------------------------------------------------------
 echo "--- VSCode Configs"
 sudo cp "$ROOT/config/vscode/settings.json" "$WIN_HOME/AppData/Roaming/Code/User/settings.json"
 
+# WSL Update and Clean ============================================
+# -----------------------------------------------------------------
 echo "--- Update and clean WSL (This wi ll take about 30s)."
 sudo dpkg --configure -a
 echo "--- --- Update"
@@ -19,6 +29,8 @@ echo "--- --- Garbage Collection"''
 sudo apt-get -y autoremove >&-  
 sudo apt-get -y autoclean >&-
 
+# WSL Installs ====================================================
+# -----------------------------------------------------------------
 echo "--- Install package sources." 
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - >&-
 
