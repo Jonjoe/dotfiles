@@ -1,5 +1,3 @@
-#!/bim/bash
-
 # Change iterms tab name
 tab ()
 {

@@ -1,5 +1,3 @@
-#!/bim/bash
-
 # Delete database and reload it with data
 sqliteRailsDB () {
   rm -rf db/development.sqlite3

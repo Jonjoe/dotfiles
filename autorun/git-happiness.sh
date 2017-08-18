@@ -1,5 +1,3 @@
-#!/bim/bash
-
 # Quick Commits
 gCommit(){
   git add .
