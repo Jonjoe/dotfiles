@@ -9,6 +9,7 @@ generate-ls() {
 	echo ''
 	echo '---------------------------------------------------------------'
 	echo '  REACT  '
-	echo '  React Stateless Component | generate-rslc [component name]  '
+	echo '  React Stateless Functional Component | generate-rsfc [component name]  '
+	echo '  React Higher Order Container         | generate-rhoc [component name]  '
 	echo '_______________________________________________________________'
 }
