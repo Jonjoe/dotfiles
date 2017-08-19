@@ -1,6 +1,6 @@
 # | Bash Configs ==================================================
 # -----------------------------------------------------------------
-# Personalisations for my bash terminal experience. 
+# Personalisations for my bash terminal experience.
 #
 
 # Starting Position ===============================================
@@ -25,6 +25,13 @@ done
 # Autorun Files ===================================================
 # -----------------------------------------------------------------
 for SCRIPT in ~/Projects/Personal/dotfiles/autorun/*
+do
+  source $SCRIPT
+done
+
+# Load Generators =================================================
+# -----------------------------------------------------------------
+for SCRIPT in ~/Projects/Personal/dotfiles/generators/*
 do
   source $SCRIPT
 done

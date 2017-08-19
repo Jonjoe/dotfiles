@@ -8,3 +8,9 @@
 dockerIP() {
 	sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $@
 }
+
+# WSL Docker Middleware ===========================================
+# -----------------------------------------------------------------
+docker() {
+	~/.docker/docker -H tcp://0.0.0.0:2375 $@
+}
