@@ -12,6 +12,15 @@ generate-rsfc() {
 	cd ../
 }
 
+# Setup a redux ducky module  =====================================
+# -----------------------------------------------------------------
+generate-rrdm() {
+  git clone git@github.com:Jonjoe/react-redux-ducky-module.git $@
+	cd ./$@
+	rm -rf .git
+	cd ../
+}
+
 # Setup a higher order container  =================================
 # -----------------------------------------------------------------
 generate-rhoc() {
