@@ -6,7 +6,7 @@
 # Setup a stateless functional component  =========================
 # -----------------------------------------------------------------
 generate-rsfc() {
-  git clone git@github.com:Jonjoe/react-base-functional-component.git $@
+	git clone git@github.com:Jonjoe/react-base-functional-component.git $@
 	cd ./$@
 	rm -rf .git
 	cd ../
@@ -15,7 +15,7 @@ generate-rsfc() {
 # Setup a redux ducky module  =====================================
 # -----------------------------------------------------------------
 generate-rrdm() {
-  git clone git@github.com:Jonjoe/react-redux-ducks-module.git $@
+	git clone git@github.com:Jonjoe/react-redux-ducks-module.git $@
 	cd ./$@
 	rm -rf .git
 	cd ../
@@ -24,7 +24,7 @@ generate-rrdm() {
 # Setup a higher order container  =================================
 # -----------------------------------------------------------------
 generate-rhoc() {
-  git clone git@github.com:Jonjoe/react-base-higher-component.git $@
+	git clone git@github.com:Jonjoe/react-base-higher-component.git $@
 	cd ./$@
 	rm -rf .git
 	cd ../
