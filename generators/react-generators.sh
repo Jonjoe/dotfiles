@@ -29,5 +29,3 @@ generate-rhoc() {
 	rm -rf .git
 	cd ../
 }
-
-
