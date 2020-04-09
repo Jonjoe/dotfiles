@@ -27,10 +27,26 @@ die_motherfucker_die() {
 	sudo apt-get autoremove && sudo apt-get autoclean
 }
 
+# Change directory and list contents ==============================
+# -----------------------------------------------------------------
+cdl() {
+  cd "$1" && ls -la
+}
+
+# Create file and missing parent directories ======================
+# -----------------------------------------------------------------
+mktouch() {
+  mkdir -p "$(dirname "$1")"
+  touch "$1"
+}
+
 # Terminal Aliases ================================================
 # -----------------------------------------------------------------
-alias root="cd /mnt/c/Users/me && ls -la"
 alias clear_vim="find . -name '*.sw*' -type f -delete"
 alias clear_ds="find . -name '*.DS_Store' -type f -delete"
-alias hosts="sudo vim /etc/hosts"
 alias reload=". ~/.bashrc"
+alias ls=ls -la
+alias vim=nvim
+
+
+
