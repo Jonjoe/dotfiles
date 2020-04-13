@@ -9,6 +9,15 @@
 NORMAL=$(tput sgr0)
 BOLD=$(tput bold)
 
+# Oh My ZSH Setup =====================================================
+# -----------------------------------------------------------------
+if [ ! -d ~/.oh-my-zsh ]; then
+	OMZSH_STATUS="Oh My ZSH:$BOLD Installed $NORMAL"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+	OMZSH_STATUS="Oh My Zsh: Already Installed"
+fi
+
 # Rbenv Setup =====================================================
 # -----------------------------------------------------------------
 if [ ! -d ~/.rbenv ]; then
@@ -56,6 +65,7 @@ fi
 # -----------------------------------------------------------------
 echo "Tooling Installs"
 echo "--- $NPM_GLOBAL_STATUS"
+echo "--- $OMZSH_STATUS"
 echo "--- $RBENV_STATUS"
 echo "--- $RBUILD_STATUS"
 echo "--- $FZF_STATUS"
