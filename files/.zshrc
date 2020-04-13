@@ -11,7 +11,6 @@ cd $HOME/Engineering && ls -la
 # -----------------------------------------------------------------
 . ~/.config/scripts/extra-paths.sh
 . ~/.config/scripts/environment_variables.sh
-. ~/.config/scripts/secret_environment_variables.sh
 
 # ZSH & Themeing ==================================================
 # -----------------------------------------------------------------

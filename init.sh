@@ -8,3 +8,5 @@ ROOT=$(dirname $FILEPATH)
 . $ROOT/makeitso/deploy-scripts.sh
 . $ROOT/makeitso/deploy-nvim.sh
 . $ROOT/makeitso/unix-tooling.sh
+
+source ~/.zshrc
