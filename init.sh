@@ -4,6 +4,7 @@
 FILEPATH=$(realpath $0)
 ROOT=$(dirname $FILEPATH)
 
-. $ROOT/makeitso/global-variables.sh
-. $ROOT/makeitso/deploy-configs.sh
+. $ROOT/makeitso/deploy-files.sh
+. $ROOT/makeitso/deploy-scripts.sh
+. $ROOT/makeitso/deploy-nvim.sh
 . $ROOT/makeitso/unix-tooling.sh

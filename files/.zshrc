@@ -5,14 +5,13 @@
 
 # Starting Position ===============================================
 # -----------------------------------------------------------------
-cd $HOME/Projects && ls -la
+cd $HOME/Engineering && ls -la
 
 # Required Preboot Files ==========================================
 # -----------------------------------------------------------------
-. ~/.extra-paths.sh
-. ~/.environment_variables.sh
-. ~/.secret_environment_variables.sh
-. ~/.bash_it_config.sh
+. ~/.config/scripts/extra-paths.sh
+. ~/.config/scripts/environment_variables.sh
+. ~/.config/scripts/secret_environment_variables.sh
 
 # ZSH & Themeing ==================================================
 # -----------------------------------------------------------------

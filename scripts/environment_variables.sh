@@ -10,7 +10,7 @@ export PG_PASSWORD=password
 
 # System Vars =====================================================
 # -----------------------------------------------------------------
-export EDITOR=vim
+export EDITOR=nvim
 export BROWSER='chromium'
 export NODE_ENV='development'
 

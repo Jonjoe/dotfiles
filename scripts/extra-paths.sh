@@ -7,9 +7,7 @@
 # -----------------------------------------------------------------
 BIN_PATH="~/.bin"
 RBENV_PATH="~/.rbenv/bin"
-NPM_GLOBAL_PATH="~/.npm-global/bin"
 SBIN_PATH="/usr/local/sbin"
-BASHER_PATH="~/.basher/bin"
 PYTHON2_PATH="/usr/local/opt/python@2/libexec/bin"
 
 # Load into Path array ============================================
@@ -17,8 +15,6 @@ PYTHON2_PATH="/usr/local/opt/python@2/libexec/bin"
 PATH_ARRAY=(
   $BIN_PATH
   $RBENV_PATH
-  $NPM_GLOBAL_PATH
   $SBIN_PATH
-  $WIN_DOCKER_PATH
-  $BASHER_PATH
+  $PYTHON2_PATH
 )
