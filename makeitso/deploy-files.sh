@@ -3,10 +3,20 @@
 # Deploy configs & dotfiles
 #
 
+echo " "
+echo "==========================="
+echo "Deploying DotFiles"
+echo "==========================="
+echo " "
+
+# Variables =======================================================
+# -----------------------------------------------------------------
 FILEPATH=$(realpath $0)
 ROOT=$(dirname $FILEPATH)
 IFS=""
 
+# Clean array from prefixes =======================================
+# -----------------------------------------------------------------
 remove_dot_and_dotdot_dirs()
 {
     sed \
@@ -14,13 +24,14 @@ remove_dot_and_dotdot_dirs()
       -e 's/\x00[.]\{1,2\}\x00/\x00/g'
 }
 
+# Remove ./ prefixes ==============================================
+# -----------------------------------------------------------------
 remove_leading_dotslash()
 {
     sed \
       -e 's/^[.]\///' \
       -e 's/\x00[.]\//\x00/g'
 }
-
 
 # Loop files ======================================================
 # -----------------------------------------------------------------
@@ -39,5 +50,3 @@ find $ROOT/files -maxdepth 1 -print0 |
       echo "${FILENAME} has been linked"
     fi
   done
-
-echo "Done"

@@ -2,14 +2,23 @@
 # -----------------------------------------------------------------
 # Install Unix tools:
 #    - Rbenv,
+#    - Oh My ZSH,
 #    - Ruby build,
 #    - FZF,
 #    - Github Hub,
 
+echo " "
+echo "==========================="
+echo "Setup Unix Tooling"
+echo "==========================="
+echo " "
+
+# Variables =======================================================
+# -----------------------------------------------------------------
 NORMAL=$(tput sgr0)
 BOLD=$(tput bold)
 
-# Oh My ZSH Setup =====================================================
+# Oh My ZSH Setup =================================================
 # -----------------------------------------------------------------
 if [ ! -d ~/.oh-my-zsh ]; then
 	OMZSH_STATUS="Oh My ZSH:$BOLD Installed $NORMAL"
@@ -70,4 +79,3 @@ echo "--- $RBENV_STATUS"
 echo "--- $RBUILD_STATUS"
 echo "--- $FZF_STATUS"
 echo "--- $HUB_STATUS"
-echo "Done"

@@ -15,22 +15,13 @@ cd $HOME/Engineering && ls -la
 # ZSH & Themeing ==================================================
 # -----------------------------------------------------------------
 export ZSH="/Users/jonjoe/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="steeef"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Construct Path ==================================================
-# -----------------------------------------------------------------
-for path in "${PATH_ARRAY[@]}"
-do
-  export PATH="$path:$PATH"
-done
-
 # Autorun Files ===================================================
 # -----------------------------------------------------------------
-for SCRIPT in ~/Projects/Personal/dotfiles/autorun/*
+for SCRIPT in ~/.config/scripts/*
 do
   source $SCRIPT
 done
