@@ -11,12 +11,12 @@ echo " "
 
 # Variables =======================================================
 # -----------------------------------------------------------------
-FILEPATH=$(realpath $0)
-ROOT=$(dirname $FILEPATH)
+
 IFS=""
 
 # Clean array from prefixes =======================================
 # -----------------------------------------------------------------
+
 remove_dot_and_dotdot_dirs()
 {
     sed \
@@ -26,6 +26,7 @@ remove_dot_and_dotdot_dirs()
 
 # Remove ./ prefixes ==============================================
 # -----------------------------------------------------------------
+
 remove_leading_dotslash()
 {
     sed \
@@ -35,7 +36,6 @@ remove_leading_dotslash()
 
 # Loop files ======================================================
 # -----------------------------------------------------------------
-echo "Constructing Symlinks"
 
 find $ROOT/files -maxdepth 1 -print0 |
   sort -z |
