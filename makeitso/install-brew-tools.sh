@@ -23,6 +23,7 @@ fi
 # -----------------------------------------------------------------
 
 brew list git || brew install git
+brew list tmux || brew install tmux
 brew list grep || brew install grep
 brew list watchman || brew install watchman
 brew list neovim || brew install neovim
