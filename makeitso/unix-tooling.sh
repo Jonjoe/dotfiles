@@ -22,7 +22,7 @@ BOLD=$(tput bold)
 # -----------------------------------------------------------------
 if [ ! -d ~/.oh-my-zsh ]; then
 	OMZSH_STATUS="Oh My ZSH:$BOLD Installed $NORMAL"
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 else
 	OMZSH_STATUS="Oh My Zsh: Already Installed"
 fi
