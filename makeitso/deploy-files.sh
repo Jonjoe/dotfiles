@@ -37,6 +37,8 @@ remove_leading_dotslash()
 # Loop files ======================================================
 # -----------------------------------------------------------------
 
+rm -rf ~/.zsh*
+
 find $ROOT/files -maxdepth 1 -print0 |
   sort -z |
   remove_dot_and_dotdot_dirs |
