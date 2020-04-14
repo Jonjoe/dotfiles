@@ -17,3 +17,6 @@ echo "==========================="
 echo " "
 
 source ~/.zshrc
+
+vim +'PlugInstall --sync' +qa
+vim -c CocInstall coc-tsserver
