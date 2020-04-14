@@ -18,6 +18,7 @@ mkdir -p ~/.config/scripts
 
 # Run Loop ========================================================
 # -----------------------------------------------------------------
+
 for FILE in $ROOT/scripts/*
 do
   ln -s $FILE ~/.config/scripts/$(basename $FILE)
