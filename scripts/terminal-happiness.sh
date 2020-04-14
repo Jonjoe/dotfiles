@@ -57,6 +57,6 @@ reload_tmux() {
 
 alias clear_vim="find . -name '*.sw*' -type f -delete"
 alias clear_ds="find . -name '*.DS_Store' -type f -delete"
-alias reload=". ~/.bashrc"
+alias reload=". ~/.zshrc"
 alias ls=ls -la
 alias vim=nvim
