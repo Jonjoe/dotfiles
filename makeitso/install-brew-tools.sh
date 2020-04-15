@@ -28,5 +28,3 @@ brew list grep || brew install grep
 brew list watchman || brew install watchman
 brew list neovim || brew install neovim
 brew list rbenv || brew install rbenv
-
-rbenv init

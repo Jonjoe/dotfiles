@@ -18,6 +18,8 @@ export ZSH="/Users/jonjoe/.oh-my-zsh"
 ZSH_THEME="steeef"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
+tic ~/.xterm-256color-italic.terminfo
+export TERM=xterm-256color
 
 # Autorun Files ===================================================
 # -----------------------------------------------------------------
