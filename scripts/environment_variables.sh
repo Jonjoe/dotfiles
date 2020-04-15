@@ -10,9 +10,10 @@ export PG_PASSWORD=password
 
 # System Vars =====================================================
 # -----------------------------------------------------------------
-export EDITOR=nvim
+export EDITOR="nvim"
 export BROWSER='chromium'
 export NODE_ENV='development'
+export TMUXINATOR_CONFIG=~/Engineering/dotfiles/tmuxinator
 
 # Docker Vars =====================================================
 # -----------------------------------------------------------------
