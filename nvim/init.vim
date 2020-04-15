@@ -3,8 +3,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'neomake/neomake'
   Plug 'tpope/vim-fugitive'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-sensible'
@@ -15,7 +13,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
   Plug 'alvan/vim-closetag'
   Plug 'preservim/nerdtree'
-  Plug 'morhetz/gruvbox'
+  Plug 'phanviet/vim-monokai-pro'
+  Plug 'tpope/vim-obsession'
   Plug 'JamshedVesuna/vim-markdown-preview'
   Plug 'AndrewRadev/tagalong.vim'
   Plug 'ConradIrwin/vim-bracketed-paste'
@@ -47,7 +46,14 @@ filetype plugin indent on
 
 " Set Vim Theme
 set termguicolors
-colorscheme gruvbox
+colorscheme monokai_pro
+
+hi htmlArg gui=italic
+hi Comment gui=italic
+hi Type    gui=italic
+hi htmlArg cterm=italic
+hi Comment cterm=italic
+hi Type    cterm=italic
 
 " Auto update files if changed by external source
 set autoread
@@ -197,9 +203,6 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 map <leader>b :NERDTreeToggle<CR>"
 " Show hidden files
 let NERDTreeShowHidden=1
-
-" Airline
-let g:airline_theme='bubblegum'
 
 
 " Fzf
