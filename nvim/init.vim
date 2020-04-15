@@ -48,6 +48,9 @@ filetype plugin indent on
 set termguicolors
 colorscheme monokai_pro
 
+highlight Normal guibg=none
+highlight NonText guibg=none
+
 hi htmlArg gui=italic
 hi Comment gui=italic
 hi Type    gui=italic
