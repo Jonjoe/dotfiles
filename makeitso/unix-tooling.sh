@@ -36,6 +36,7 @@ fi
 if [ ! -d ~/.oh-my-zsh ]; then
 	OMZSH_STATUS="Oh My ZSH:$BOLD Installed $NORMAL"
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 else
 	OMZSH_STATUS="Oh My Zsh: Already Installed"
 fi

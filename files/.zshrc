@@ -15,11 +15,11 @@ cd $HOME/Engineering && ls -la
 # ZSH & Themeing ==================================================
 # -----------------------------------------------------------------
 export ZSH="/Users/jonjoe/.oh-my-zsh"
-ZSH_THEME="steeef"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 tic ~/.xterm-256color-italic.terminfo
-export TERM=xterm-256color
+TERM=xterm-256color
 
 # Autorun Files ===================================================
 # -----------------------------------------------------------------
@@ -31,3 +31,6 @@ done
 # Rbenv Init ======================================================
 # -----------------------------------------------------------------
 eval "$(rbenv init -)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
