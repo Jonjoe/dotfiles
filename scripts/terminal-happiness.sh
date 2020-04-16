@@ -60,4 +60,5 @@ alias clear_ds="find . -name '*.DS_Store' -type f -delete"
 alias reload=". ~/.zshrc"
 alias ls=ls -la
 alias vim=nvim
+alias tx=tmuxinator
 alias reload_dotfiles="sh ~/Engineering/dotfiles/init.sh"
