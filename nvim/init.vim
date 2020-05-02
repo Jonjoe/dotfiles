@@ -10,8 +10,11 @@ call plug#begin('~/.vim/plugged')
   " Code Navigation
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+  " Code Quality
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
+" ================ Core Config 
 let mapleader        = ','
 set mouse            =a
 
@@ -66,6 +69,16 @@ nnoremap <leader><CR>     :Buffers<CR>
 nnoremap <leader>fl       :Lines<CR>
 nnoremap <leader>ag       :Ag! <C-R><C-W><CR>
 nnoremap <leader>m        :History<CR>
+
+" ================ Prettier 
+
+" Enable Autoformatter
+let g:prettier#autoformat = 1
+
+" Include these file extensions
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+" ================ CoC
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
