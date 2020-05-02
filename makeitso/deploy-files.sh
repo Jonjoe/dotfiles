@@ -51,7 +51,3 @@ find $ROOT/files -maxdepth 1 -print0 |
       echo "${FILENAME} has been linked"
     fi
   done
-
-# Support Italics in Iterm ========================================
-# -----------------------------------------------------------------
-tic ~/xterm-256color-italic.terminfo

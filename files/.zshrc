@@ -6,7 +6,7 @@
 # Starting Position ===============================================
 # -----------------------------------------------------------------
 cd $HOME/Engineering && ls -la
-echo " "
+echo ""
 
 # Required Preboot Files ==========================================
 # -----------------------------------------------------------------
@@ -19,8 +19,6 @@ export ZSH="/Users/jonjoe/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-tic ~/.xterm-256color-italic.terminfo
-TERM=xterm-256color
 
 # Autorun Files ===================================================
 # -----------------------------------------------------------------
