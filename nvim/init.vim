@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " Code Quality
+  Plug 'w0rp/ale'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
@@ -108,7 +109,7 @@ let g:prettier#autoformat = 1
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " ============================
-" | Prettier CoC
+" | Prettier Config
 " ============================
 
 " Remap keys for gotos
@@ -116,3 +117,21 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+
+
+" ============================
+" | Ale Config
+" ============================
+
+" Define linters
+let g:ale_fixers = {
+ \ 'javascript': ['eslint']
+ \ }
+
+" Set icons ale uses
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
+" Toggle ale when you save file
+let g:ale_fix_on_save = 1
