@@ -61,4 +61,5 @@ alias reload=". ~/.zshrc"
 alias ls=ls -la
 alias vim=nvim
 alias tx=tmuxinator
+alias npm_login_github="npm login --registry=https://npm.pkg.github.com"
 alias reload_dotfiles="sh ~/Engineering/dotfiles/init.sh"
