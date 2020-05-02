@@ -1,10 +1,16 @@
 call plug#begin('~/.vim/plugged')
+  Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-sensible'
+  Plug 'preservim/nerdtree'
 call plug#end()
 
-let mapleader = ','
-set mouse     =a
+let mapleader        = ','
+set mouse            =a
+syntax enable
+colorscheme dracula
+set relativenumber
+set number
 
 " Netrw
 
