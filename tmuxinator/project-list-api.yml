@@ -1,0 +1,9 @@
+name: project-list-api
+root: ~/Engineering/project-list-api
+
+windows:
+  - editor:
+      layout: main-vertical 
+      panes:
+        - vim ./package.json -c NERDTree
+        - cd ~/Engineering/project-list-api && npm start 

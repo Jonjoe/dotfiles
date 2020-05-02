@@ -1,0 +1,14 @@
+name: friday
+root: ~/Engineering/friday
+
+windows:
+  - editor:
+      layout: main-vertical 
+      panes:
+        - vim ./package.json -c NERDTree
+  - services:
+      layout: 18c2,221x46,0,0{110x46,0,0,1,110x46,111,0[110x23,111,0,2,110x22,111,24,3]}
+      panes:
+        - cd ~/Engineering/friday && npm run test:dev
+        - cd ~/Engineering/friday && npm run start
+        - cd ~/Engineering/friday
