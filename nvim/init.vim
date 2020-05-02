@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+  " Theme and Syntax
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'sheerun/vim-polyglot'
 
@@ -15,17 +16,31 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " ================ Core Config 
+" Remap LEADER key
 let mapleader        = ','
+
+" Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
+" Enable vim to be usable with a mouse
 set mouse            =a
-
-
-
-
 
 " ================ Theme Config 
 
 " Put vim into syntax mode
 syntax enable
+
+" Stop Dracula from forcing its background
+let g:dracula_colorterm = 0
 
 " Set Dracula as the color scheme
 colorscheme dracula
@@ -33,9 +48,6 @@ colorscheme dracula
 " Configure the line numbers
 set relativenumber
 set number
-
-" Stop Dracula from forcing its background
-let g:dracula_colorterm = 0
 
 " ================ Netrw 
 
@@ -54,8 +66,8 @@ let g:netrw_sort_sequence ='[\/]$,*'
 map <leader>b :NERDTreeToggle<CR>"
 
 " Show hidden files
-let NERDTreeShowHidden=1" ================ CoC
- 
+let NERDTreeShowHidden=1
+
 " ================ FZF
 
 " Set executable path
