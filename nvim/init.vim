@@ -1,3 +1,7 @@
+" ============================
+" | Install Plugins
+" ============================
+
 call plug#begin('~/.vim/plugged')
   " Theme and Syntax
   Plug 'dracula/vim', { 'as': 'dracula' }
@@ -15,7 +19,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
-" ================ Core Config 
+" ============================
+" | Core Config 
+" ============================
+
 " Remap LEADER key
 let mapleader        = ','
 
@@ -34,7 +41,9 @@ vnoremap <leader>P "+P
 " Enable vim to be usable with a mouse
 set mouse            =a
 
-" ================ Theme Config 
+" ============================
+" | Theme Config 
+" ============================
 
 " Put vim into syntax mode
 syntax enable
@@ -49,7 +58,9 @@ colorscheme dracula
 set relativenumber
 set number
 
-" ================ Netrw 
+" ============================
+" | NetRW Config
+" ============================ 
 
 " Disable Banner
 let g:netrw_banner = 0
@@ -60,7 +71,9 @@ let g:netrw_liststyle = 1
 " Directories on the top, files below
 let g:netrw_sort_sequence ='[\/]$,*'
 
-" ================ NerdTree
+" ============================
+" | Nerdtree Config
+" ============================
 
 " Trigger
 map <leader>b :NERDTreeToggle<CR>"
@@ -68,7 +81,9 @@ map <leader>b :NERDTreeToggle<CR>"
 " Show hidden files
 let NERDTreeShowHidden=1
 
-" ================ FZF
+" ============================
+" | FZF Config
+" ============================
 
 " Set executable path
 set rtp+=/usr/local/opt/fzf
@@ -82,7 +97,9 @@ nnoremap <leader>fl       :Lines<CR>
 nnoremap <leader>ag       :Ag! <C-R><C-W><CR>
 nnoremap <leader>m        :History<CR>
 
-" ================ Prettier 
+" ============================
+" | Prettier Config
+" ============================
 
 " Enable Autoformatter
 let g:prettier#autoformat = 1
@@ -90,7 +107,9 @@ let g:prettier#autoformat = 1
 " Include these file extensions
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
-" ================ CoC
+" ============================
+" | Prettier CoC
+" ============================
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
