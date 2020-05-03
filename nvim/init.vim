@@ -5,7 +5,9 @@
 call plug#begin('~/.vim/plugged')
   " Theme and Syntax
   Plug 'arcticicestudio/nord-vim'
-  Plug 'sheerun/vim-polyglot'
+  Plug 'pangloss/vim-javascript'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'peitalin/vim-jsx-typescript'
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
@@ -66,6 +68,7 @@ hi Comment cterm=italic
 hi Type    cterm=italic
 
 " Convert tabs to spaces
+set smartindent
 set expandtab
 set tabstop=2
 set softtabstop=2
