@@ -45,6 +45,9 @@ set mouse            =a
 " | Theme Config 
 " ============================
 
+" Auto reload files if file is edited externally
+set autoread
+
 " Put vim into syntax mode
 syntax enable
 
