@@ -27,16 +27,16 @@ module.exports = {
     letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.8)',
+    cursorColor: 'rgba(255,255,255,0.8)',
 
     // terminal text color under BLOCK cursor
     cursorAccentColor: '#000',
 
     // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
-    cursorShape: 'BLOCK',
+    cursorShape: 'BEAM',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: '#fff',
@@ -146,7 +146,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-hide-title", "space-pull", 'hyper-font-ligatures', "hyper-font-smoothing", "hyper-dracula", "hyperterm-1password" ],
+  plugins: ["hyper-hide-title", "space-pull", 'hyper-font-ligatures', "hyper-font-smoothing", "nord-hyper", "hyperterm-1password" ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

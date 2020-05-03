@@ -4,11 +4,9 @@
 
 call plug#begin('~/.vim/plugged')
   " Theme and Syntax
-  Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'arcticicestudio/nord-vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
 
   " Core Components
   Plug 'tpope/vim-sensible'
@@ -53,12 +51,17 @@ set autoread
 " Put vim into syntax mode
 syntax enable
 
-" Stop Dracula from forcing its background
-let g:dracula_colorterm = 0
-
 " Set Dracula as the color scheme
 set termguicolors
-colorscheme dracula
+colorscheme nord
+
+" Itallisize parts of the syntax
+hi htmlArg gui=italic
+hi Comment gui=italic
+hi Type    gui=italic
+hi htmlArg cterm=italic
+hi Comment cterm=italic
+hi Type    cterm=italic
 
 " Convert tabs to spaces
 set expandtab
@@ -77,12 +80,7 @@ set number
 " Disable status line
 set ls=0
 
-" ============================
-" | Airline Config
-" ============================ 
-
-" Set theme
-let g:airline_theme='dracula'
+let g:nord_cursor_line_number_background = 3
 
 " ============================
 " | NetRW Config
