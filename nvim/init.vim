@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
   " Theme and Syntax
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'sheerun/vim-polyglot'
+  Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
   " Core Components
   Plug 'tpope/vim-sensible'
