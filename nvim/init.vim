@@ -123,6 +123,11 @@ nnoremap <leader>fl       :Lines<CR>
 nnoremap <leader>ag       :Ag! <C-R><C-W><CR>
 nnoremap <leader>m        :History<CR>
 
+" Disable FZF status bar
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
 " ============================
 " | Coc Config
 " ============================
