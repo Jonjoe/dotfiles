@@ -28,3 +28,4 @@ brew list grep || brew install grep
 brew list watchman || brew install watchman
 brew list neovim || brew install neovim
 brew list rbenv || brew install rbenv
+brew list reattach-to-user-namespace || brew install reattach-to-user-namespace
