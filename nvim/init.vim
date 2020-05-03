@@ -7,6 +7,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'sheerun/vim-polyglot'
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
   " Core Components
   Plug 'tpope/vim-sensible'
@@ -55,6 +57,7 @@ syntax enable
 let g:dracula_colorterm = 0
 
 " Set Dracula as the color scheme
+set termguicolors
 colorscheme dracula
 
 " Convert tabs to spaces
@@ -70,6 +73,16 @@ autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 " Configure the line numbers
 set relativenumber
 set number
+
+" Disable status line
+set ls=0
+
+" ============================
+" | Airline Config
+" ============================ 
+
+" Set theme
+let g:airline_theme='dracula'
 
 " ============================
 " | NetRW Config
