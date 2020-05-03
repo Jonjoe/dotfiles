@@ -60,6 +60,10 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
+" Conditionally Regenerate syntax highlighting 
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
 " Configure the line numbers
 set relativenumber
 set number
@@ -78,7 +82,7 @@ let g:netrw_liststyle = 1
 let g:netrw_sort_sequence ='[\/]$,*'
 
 " ============================
-" | Nerdtree Config
+" | NerdTree Config
 " ============================
 
 " Trigger
