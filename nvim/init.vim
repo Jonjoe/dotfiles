@@ -13,12 +13,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree'
   Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }
 
-  " Code Navigation
+  " Code Intelligence
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-  " Code Quality
-  Plug 'w0rp/ale'
-  Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
 " ============================
@@ -39,6 +35,8 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
+
+set updatetime=300
 
 " Enable vim to be usable with a mouse
 set mouse            =a
@@ -100,39 +98,29 @@ nnoremap <leader>ag       :Ag! <C-R><C-W><CR>
 nnoremap <leader>m        :History<CR>
 
 " ============================
-" | Prettier Config
+" | Coc Config
 " ============================
 
-" Enable Autoformatter
-let g:prettier#autoformat = 1
+function! ShowDocIfNoDiagnostic(timer_id)
+  if (coc#util#has_float() == 0)
+    silent call CocActionAsync('doHover')
+  endif
+endfunction
 
-" Include these file extensions
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+function! s:show_hover_doc()
+  call timer_start(500, 'ShowDocIfNoDiagnostic')
+endfunction
 
-" ============================
-" | Prettier Config
-" ============================
+autocmd CursorHoldI * :call <SID>show_hover_doc()
+autocmd CursorHold * :call <SID>show_hover_doc()
+
+" Set Packages needed
+let g:coc_global_extensions = ['coc-tsserver']
+let g:coc_global_extensions += ['coc-prettier']
+let g:coc_global_extensions += ['coc-eslint']
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-
-
-" ============================
-" | Ale Config
-" ============================
-
-" Define linters
-let g:ale_fixers = {
- \ 'javascript': ['eslint']
- \ }
-
-" Set icons ale uses
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
-
-" Toggle ale when you save file
-let g:ale_fix_on_save = 1
