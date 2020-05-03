@@ -54,6 +54,12 @@ let g:dracula_colorterm = 0
 " Set Dracula as the color scheme
 colorscheme dracula
 
+" Convert tabs to spaces
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
 " Configure the line numbers
 set relativenumber
 set number
