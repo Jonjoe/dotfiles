@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
   Plug 'vim-airline/vim-airline'
+  Plug 'AndrewRadev/tagalong.vim'
   Plug 'vim-airline/vim-airline-themes'
 
   " Core Components
