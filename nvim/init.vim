@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 
   " Code Intelligence
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'tpope/vim-sleuth'
 call plug#end()
 
 " ============================
@@ -169,3 +170,10 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" ============================
+" | Sleuth Config
+" ============================
+
+" Run it automatically when we enter a new buffer
+autocmd BufEnter * :Sleuth
