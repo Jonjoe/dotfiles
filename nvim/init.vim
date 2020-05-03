@@ -22,7 +22,7 @@ call plug#end()
 " ============================
 
 " Remap LEADER key
-let mapleader        = ','
+let mapleader = "\<Space>" 
 
 " Copy to clipboard
 vnoremap  <leader>y  "+y
