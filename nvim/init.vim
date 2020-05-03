@@ -127,18 +127,19 @@ nnoremap <leader>m        :History<CR>
 " | Coc Config
 " ============================
 
-function! ShowDocIfNoDiagnostic(timer_id)
-  if (coc#util#has_float() == 0)
-    silent call CocActionAsync('doHover')
+" Use K to show documentation in preview window.
+nnoremap <silent> <leader>k :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
   endif
 endfunction
 
-function! s:show_hover_doc()
-  call timer_start(500, 'ShowDocIfNoDiagnostic')
-endfunction
-
-autocmd CursorHoldI * :call <SID>show_hover_doc()
-autocmd CursorHold * :call <SID>show_hover_doc()
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Set Packages needed
 let g:coc_global_extensions = ['coc-tsserver']
