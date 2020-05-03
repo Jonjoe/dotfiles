@@ -22,6 +22,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-surround'
+  Plug 'alvan/vim-closetag'
+  Plug 'raimondi/delimitmate'
   Plug 'tpope/vim-sleuth'
 call plug#end()
 
@@ -186,3 +189,14 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Run it automatically when we enter a new buffer
 autocmd BufEnter * :Sleuth
+
+
+" ============================
+" | TagAlong Config 
+" ============================
+
+" Support more file types
+let g:tagalong_additional_filetypes = ['html', 'tsx']
+
+" Send a message if an update happens
+let g:tagalong_verbose = 1
