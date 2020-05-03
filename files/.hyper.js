@@ -12,7 +12,8 @@ module.exports = {
     fontSize: 20,
 
     // font family with optional fallbacks
-    fontFamily: 'Operator Mono Lig',
+    fontFamily: 'SpaceMono NF',
+    // fontFamily: 'Operator Mono Lig',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: '300',

@@ -7,6 +7,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'arcticicestudio/nord-vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
   " Core Components
   Plug 'tpope/vim-sensible'
@@ -80,7 +82,14 @@ set number
 " Disable status line
 set ls=0
 
+" Hide status mode text
+set noshowmode
+
 let g:nord_cursor_line_number_background = 3
+
+
+let g:airline_theme = 'nord'
+let g:airline_powerline_fonts = 1
 
 " ============================
 " | NetRW Config
@@ -104,6 +113,9 @@ map <leader>b :NERDTreeToggle<CR>"
 
 " Show hidden files
 let NERDTreeShowHidden=1
+
+" Disable the status line
+let NERDTreeStatusline="%{matchstr(getline('.'), '\\s\\zs\\w\\(.*\\)')}"
 
 " ============================
 " | FZF Config
