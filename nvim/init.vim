@@ -19,6 +19,8 @@ call plug#begin('~/.vim/plugged')
 
   " Code Intelligence
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-sleuth'
 call plug#end()
 
@@ -91,8 +93,14 @@ set noshowmode
 
 let g:nord_cursor_line_number_background = 3
 
+" ============================
+" | Airline Config
+" ============================ 
 
+" Set theme
 let g:airline_theme = 'nord'
+
+" Enable powerline fonts
 let g:airline_powerline_fonts = 1
 
 " ============================
