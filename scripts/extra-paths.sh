@@ -5,9 +5,9 @@
 
 # Define Paths ====================================================
 # -----------------------------------------------------------------
-RBENV_PATH="~/.rbenv/bin"
+RBENV_PATH="$HOME/.rbenv/bin"
 PYTHON2_PATH="/usr/local/opt/python@2/libexec/bin"
-FLUTTER_PATH="~/.flutter/bin"
+FLUTTER_PATH="$HOME/.flutter/bin"
 
 # Load into Path array ============================================
 # -----------------------------------------------------------------
@@ -20,6 +20,6 @@ PATH_ARRAY=(
 
 for P in "${PATH_ARRAY[@]}"
 do
-  export PATH=$P:$PATH
+  export PATH="$PATH:$P"
 done
 
