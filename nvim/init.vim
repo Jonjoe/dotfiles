@@ -11,6 +11,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
   Plug 'vim-airline/vim-airline'
   Plug 'AndrewRadev/tagalong.vim'
+  Plug 'vim-scripts/applescript.vim'
+  Plug 'dart-lang/dart-vim-plugin'
   Plug 'vim-airline/vim-airline-themes'
 
   " Core Components
