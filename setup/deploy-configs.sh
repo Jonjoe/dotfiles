@@ -1,26 +1,23 @@
-# | Deploy Scripts ================================================
+# | Deploy Configs ================================================
 # -----------------------------------------------------------------
 # Deploy scripts
 #
 
-echo " "
-echo "==========================="
-echo "Constructing Script Symlinks"
-echo "==========================="
-echo " "
+outputTitle "Constructing Config Symlinks"
 
 # Setup ===========================================================
 # -----------------------------------------------------------------
 
 cd $ROOT
-rm -rf ~/.config/scripts
-mkdir -p ~/.config/scripts 
+rm -rf ~/.config/custom-configs
+mkdir -p ~/.config/custom-configs 
+
 
 # Run Loop ========================================================
 # -----------------------------------------------------------------
 
-for FILE in $ROOT/scripts/*
+for FILE in $ROOT/configs/*
 do
-  ln -s $FILE ~/.config/scripts/$(basename $FILE)
-  echo "--- $BOLD$(basename $FILE)$NORMAL"
+  ln -s $FILE ~/.config/custom-configs/$(basename $FILE)
+  echo "${spacer} ${bold}$(basename $FILE)${normal}"
 done

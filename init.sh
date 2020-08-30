@@ -4,16 +4,22 @@
 FILEPATH=$(realpath $0)
 ROOT=$(dirname $FILEPATH)
 
-. $ROOT/makeitso/install-brew-tools.sh
-. $ROOT/makeitso/unix-tooling.sh
-. $ROOT/makeitso/deploy-files.sh
-. $ROOT/makeitso/deploy-scripts.sh
-. $ROOT/makeitso/deploy-nvim.sh
+bold=$(tput bold)
+normal=$(tput sgr0)
+spacer="-----------------"
 
-echo " "
-echo "==========================="
-echo "DONE - Go forth and prosper!"
-echo "==========================="
-echo " "
+outputTitle () {
+  echo " "
+  echo "==========================="
+  echo "| $1"
+  echo "==========================="
+  echo " "
+}
 
-source ~/.zshrc
+. $ROOT/setup/install-brew-tools.sh
+. $ROOT/setup/unix-tooling.sh
+. $ROOT/setup/deploy-dotfiles.sh
+. $ROOT/setup/deploy-configs.sh
+. $ROOT/setup/deploy-nvim.sh
+
+outputTitle "DONE - Reset the terminal"

@@ -3,11 +3,7 @@
 # Deploy configs & dotfiles
 #
 
-echo " "
-echo "==========================="
-echo "Deploying DotFiles"
-echo "==========================="
-echo " "
+outputTitle "Deploying DotFiles"
 
 # Variables =======================================================
 # -----------------------------------------------------------------
@@ -38,7 +34,7 @@ remove_leading_dotslash()
 # -----------------------------------------------------------------
 rm -rf ~/.zsh*
 
-find $ROOT/files -maxdepth 1 -print0 |
+find $ROOT/dotfiles -maxdepth 1 -print0 |
   sort -z |
   remove_dot_and_dotdot_dirs |
   remove_leading_dotslash |
@@ -48,6 +44,6 @@ find $ROOT/files -maxdepth 1 -print0 |
       FILENAME=$(basename "${FILE}")
       rm -rf ~/$FILENAME
       ln -s $FILE ~/$FILENAME
-      echo "${FILENAME} has been linked"
+      echo "${spacer} ${bold}${FILENAME}${normal}"
     fi
   done

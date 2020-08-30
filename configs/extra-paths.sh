@@ -17,7 +17,6 @@ PATH_ARRAY=(
   $FLUTTER_PATH
 )
 
-
 for P in "${PATH_ARRAY[@]}"
 do
   export PATH="$PATH:$P"

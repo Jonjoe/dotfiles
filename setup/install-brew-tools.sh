@@ -2,12 +2,7 @@
 # -----------------------------------------------------------------
 # Deploy scripts
 #
-
-echo " "
-echo "==========================="
-echo "Setting up Brew and installing CLI tools"
-echo "==========================="
-echo " "
+outputTitle "Setting up Brew"
 
 # Check if brew is installed ======================================
 # -----------------------------------------------------------------
@@ -19,13 +14,21 @@ else
     brew update
 fi
 
+
+checkIfInstalledOrInstall () {
+    echo "${spacer} ${bold}$1${normal}"
+    brew list $1 1> /dev/null || brew install $1
+}
+
 # Install cli tools ===============================================
 # -----------------------------------------------------------------
 
-brew list git || brew install git
-brew list tmux || brew install tmux
-brew list grep || brew install grep
-brew list watchman || brew install watchman
-brew list neovim || brew install neovim
-brew list rbenv || brew install rbenv
-brew list reattach-to-user-namespace || brew install reattach-to-user-namespace
+outputTitle "Setting up CLI tools"
+
+checkIfInstalledOrInstall "git"
+checkIfInstalledOrInstall "tmux"
+checkIfInstalledOrInstall "grep"
+checkIfInstalledOrInstall "watchman"
+checkIfInstalledOrInstall "neovim"
+checkIfInstalledOrInstall "rbenv"
+checkIfInstalledOrInstall "reattach-to-user-namespace"

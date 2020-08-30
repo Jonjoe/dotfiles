@@ -17,4 +17,5 @@ export TMUXINATOR_CONFIG=~/Engineering/dotfiles/tmuxinator
 
 # Docker Vars =====================================================
 # -----------------------------------------------------------------
-export DOCKER_HOST=tcp://0.0.0.0:2375
+unset DOCKER_HOST
+# export DOCKER_HOST=tcp://0.0.0.0:2375
