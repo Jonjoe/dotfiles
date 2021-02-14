@@ -25,6 +25,9 @@ checkIfInstalledOrInstall () {
 
 outputTitle "Setting up CLI tools"
 
+brew tap AdoptOpenJDK/openjdk
+brew install --cask adoptopenjdk8
+
 checkIfInstalledOrInstall "git"
 checkIfInstalledOrInstall "tmux"
 checkIfInstalledOrInstall "grep"
