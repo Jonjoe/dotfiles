@@ -11,6 +11,9 @@ plugins=(git)
 ZSH_DISABLE_COMPFIX="true"
 source $ZSH/oh-my-zsh.sh
 
+export ANDROID_SDK_ROOT="/Users/jonjoe/Library/Android/sdk"
+export PATH="$HOME/.rbenv/bin:$PATH"
+
 # Autorun Files ===================================================
 # -----------------------------------------------------------------
 for SCRIPT in ~/.config/custom-configs/*
