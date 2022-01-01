@@ -3,7 +3,7 @@
 # Deploy configs & dotfiles
 #
 
-outputTitle "Deploying DotFiles"
+outputTitle "Deploying Dotfiles"
 
 # Variables =======================================================
 # -----------------------------------------------------------------

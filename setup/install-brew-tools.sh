@@ -9,10 +9,10 @@ outputTitle "Setting up Brew"
 
 which -s brew
 if [[ $? != 0 ]] ; then
-    echo '--- Updating / Setting up Homebrew'
+    echo "${spacer} Updating / Setting up Homebrew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    echo '--- Updating brew packages'
+    echo "${spacer} Updating brew packages"
     brew update
 fi
 
