@@ -20,6 +20,5 @@ outputTitle () {
 . $ROOT/setup/unix-tooling.sh
 . $ROOT/setup/deploy-dotfiles.sh
 . $ROOT/setup/deploy-configs.sh
-. $ROOT/setup/deploy-nvim.sh
 
 outputTitle "DONE - Reset the terminal"
